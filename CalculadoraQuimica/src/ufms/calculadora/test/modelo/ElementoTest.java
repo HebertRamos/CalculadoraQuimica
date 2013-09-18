@@ -8,6 +8,11 @@ import org.junit.Test;
 import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.EnumSiglaElemento;
 
+/**
+ * 
+ * @author hramos
+ *
+ */
 public class ElementoTest extends TestCase{
 	
 	

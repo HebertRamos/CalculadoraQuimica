@@ -1,5 +1,7 @@
 package ufms.calculadora.test.extensoes;
 
+import org.junit.Ignore;
+
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import ufms.calculadora.extensoes.calculadoraAlgebrica.CalculadoraAlgebrica;
@@ -10,6 +12,7 @@ import ufms.calculadora.extensoes.calculadoraAlgebrica.Variavel;
 
 public class CalculadoraAlgebricaTest extends TestCase {
 
+	@Ignore
 	public void testDadoUmaExpressaoAlgebrica_100A_Igual_10B_Mais_20C_ESendo_A_Igual_1_E_B_Igual_2AoIsolar_C_deveRetonarAExpressao_C_Igual_4() {
 
 		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
@@ -54,6 +57,7 @@ public class CalculadoraAlgebricaTest extends TestCase {
 		Assert.assertEquals("C=4", expressaoAlgebrica.toString());
 	}
 
+	@Ignore
 	public void testDadoUmaExpressaoAlgebrica_100A_Mais_10B_Igual_20C_ESendo_A_Igual_1_E_B_Igual_2AoIsolar_C_deveRetonarAExpressao_C_Igual_4() {
 
 		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
@@ -98,6 +102,7 @@ public class CalculadoraAlgebricaTest extends TestCase {
 		Assert.assertEquals("C=6", expressaoAlgebrica.toString());
 	}
 
+	@Ignore
 	public void testDadoUmaExpressaoAlgebrica_100A_Igual_10B_ESendo_A_Igual_10_AoIsolar_B_deveRetonarAExpressao_B_Igual_4() {
 
 		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
@@ -110,9 +115,7 @@ public class CalculadoraAlgebricaTest extends TestCase {
 		var2.setId("B");
 		var2.setValorCompanheiro(100);
 
-		expressaoAlgebrica.setVariavel(var1)
-				.setOperacao(EnumOperacaoesCalculadoraAlgebrica.IGUALDADE)
-				.setVariavel(var2);
+		expressaoAlgebrica.setVariavel(var1).setOperacao(EnumOperacaoesCalculadoraAlgebrica.IGUALDADE).setVariavel(var2);
 
 		Variavel condicao1 = new Variavel();
 		condicao1.setId("A");
@@ -129,6 +132,26 @@ public class CalculadoraAlgebricaTest extends TestCase {
 		}
 
 		Assert.assertEquals("B=10", expressaoAlgebrica.toString());
+	}
+	
+	public void testDadoExpressao_A_Igual_10_AoAchamarOParseDeveRetornarUmaVarivelComValor10(){
+		
+		Variavel var1 = new Variavel();
+		var1.setId("A");
+		
+		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
+		expressaoAlgebrica.setVariavel(var1).setOperacao(EnumOperacaoesCalculadoraAlgebrica.IGUALDADE).setVariavel(10);
+		
+		CalculadoraAlgebrica calculadoraAlgebrica = new CalculadoraAlgebrica();
+		
+		Variavel varResultado = calculadoraAlgebrica.parsearParaVariavel(expressaoAlgebrica);
+		
+		Variavel varEsperada = new Variavel();
+		varEsperada.setId("A");
+		varEsperada.setValor(10);
+		
+		Assert.assertEquals(varEsperada, varResultado);
+		
 	}
 
 }

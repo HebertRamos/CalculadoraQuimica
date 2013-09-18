@@ -5,7 +5,7 @@ import java.util.List;
 
 
 /**
- * Classe para Realização de Cálculos em Cima do Objeto Expressão Algébrica. 
+ * Classe que realiza de calculos em cima de uma  Expressão Algébrica. 
  * 
  * @author hramos
  *
@@ -81,9 +81,18 @@ public class CalculadoraAlgebrica {
 		return expressaoAlgebrica;
 	}
 	
+	
+	/**
+	 * Faz um parse da Expressão Algebrica para uma variável se existe uma igualdade da variavel. Ex: A=10.
+	 * 
+	 * @param expressaoAlgebrica
+	 * @return Variavel
+	 */
 	public Variavel parsearParaVariavel(ExpressaoAlgebrica expressaoAlgebrica){
 		
-		if(expressaoAlgebrica.getLadoEsquerdo().size() == 1 && expressaoAlgebrica.getLadoDireito().size() == 1 ){
+		expressaoAlgebrica.getLadoEsquerdo().set(0, expressaoAlgebrica.getLadoEsquerdo().get(0).replace("1", ""));
+		
+		if(expressaoAlgebrica.getLadoEsquerdo().size() == 1 && expressaoAlgebrica.getLadoDireito().size() == 1 && !expressaoAlgebrica.getLadoEsquerdo().get(0).matches(".*\\d.*")){
 			Variavel var = new Variavel();
 			var.setId(expressaoAlgebrica.getLadoEsquerdo().get(0));
 			var.setValor(Integer.valueOf(expressaoAlgebrica.getLadoDireito().get(0)));
@@ -95,6 +104,11 @@ public class CalculadoraAlgebrica {
 	}
 	
 	
+	/**
+	 * Executa as operações suportadas pela calculadora em um lado da Equação Algebrica recursivamente até que o lado tenha apenas um valor.
+	 * @param lado
+	 * @return
+	 */
 	public List<String> executaOperacoesLado(List<String> lado){
 		
 		if(lado.size() >= 3){
@@ -112,6 +126,20 @@ public class CalculadoraAlgebrica {
 		return lado;
 	}
 	
+	/**
+	 * Método principal da classe, executa uma operação dado dois algarismos e um operador.
+	 * 
+	 * Posui ainda algumas regras que limitam a possibilidades de execução, são elas:
+	 * 
+	 * 1 - Os operadores tem de ser números.
+	 * 2 - Suporta os operadores SOMA E SUBTRAÇÃO
+	 * 
+	 * 
+	 * @param alg1
+	 * @param operador
+	 * @param alg2
+	 * @return
+	 */
 	public String executaOperacao(String alg1, String operador, String alg2){
 		Integer algarismo1 = Integer.valueOf(alg1);
 		Integer algarismo2 = Integer.valueOf(alg2);

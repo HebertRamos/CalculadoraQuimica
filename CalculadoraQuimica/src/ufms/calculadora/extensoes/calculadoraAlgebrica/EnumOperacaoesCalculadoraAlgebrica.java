@@ -3,6 +3,13 @@ package ufms.calculadora.extensoes.calculadoraAlgebrica;
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ * Enum com as operações realizadas pela calculadora, os símbolos das respectivas Operações são obtidos
+ * pelo método estático getSimboloOperacao;
+ * 
+ * @author hramos
+ *
+ */
 public enum EnumOperacaoesCalculadoraAlgebrica {
 
 	SOMA,
