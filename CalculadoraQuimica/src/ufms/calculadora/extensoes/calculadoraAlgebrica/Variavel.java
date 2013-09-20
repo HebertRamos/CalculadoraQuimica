@@ -9,8 +9,14 @@ public class Variavel {
 	
 	public Variavel(){}
 	
-	public Variavel(String id){
-		this.id = id;
+	public Variavel(String variavel){
+		
+		this.id = CalculadoraAlgebrica.retiraNumero(variavel);
+		String valorCompanheiro = CalculadoraAlgebrica.retiraLetra(variavel);
+		
+		if(!valorCompanheiro.isEmpty()){
+			this.setValorCompanheiro(Integer.valueOf(valorCompanheiro));
+		}
 	}
 	
 	public String getId() {

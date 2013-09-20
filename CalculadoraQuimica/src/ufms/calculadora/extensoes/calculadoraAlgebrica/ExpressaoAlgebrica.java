@@ -13,13 +13,17 @@ public class ExpressaoAlgebrica {
 	
 	private boolean setouIgualdade;
 	
-	public ExpressaoAlgebrica setVariavel(Integer variavel){
+	public ExpressaoAlgebrica setValorImediato(Integer variavel){
 		getLado(this.setouIgualdade).add(String.valueOf(variavel));
 		return this;
 	}
 	
+	public ExpressaoAlgebrica setVariavel(String variavelString){
+		return this.setVariavel(new Variavel(variavelString));
+	}
+	
 	public ExpressaoAlgebrica setVariavel(Variavel variavel){
-		getLado(this.setouIgualdade).add(variavel.getId()+variavel.getValorCompanheiro());
+		getLado(this.setouIgualdade).add(variavel.getValorCompanheiro()+variavel.getId());
 		listaVariavel.add(variavel);
 		return this;
 	}
@@ -96,11 +100,5 @@ public class ExpressaoAlgebrica {
 		}
 		return this.ladoEsquerdo;
 	}
-
-	public void trocaLado() {
-		List<String> temp = this.ladoEsquerdo;
-		this.ladoEsquerdo = this.ladoDireito;
-		this.ladoDireito = temp;
-		
-	}
+	
 }

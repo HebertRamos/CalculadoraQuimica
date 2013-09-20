@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="ufms.calculadora.extensoes.calculadoraAlgebrica.OperacaoNaoSuportadaException"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ufms.calculadora.extensoes.calculadoraAlgebrica.EnumOperacaoesCalculadoraAlgebrica"/>
+<fullyQualifiedTypeName name="ufms.calculadora.extensoes.calculadoraAlgebrica.CalculadoraAlgebrica"/>
+<fullyQualifiedTypeName name="ufms.calculadora.extensoes.calculadoraAlgebrica.Variavel"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="ufms.calculadora.extensoes.calculadoraAlgebrica.ExpressaoAlgebrica"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+</qualifiedTypeNameHistroy>
