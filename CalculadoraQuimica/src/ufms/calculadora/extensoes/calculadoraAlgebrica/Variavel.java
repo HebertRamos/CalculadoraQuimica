@@ -11,8 +11,8 @@ public class Variavel {
 	
 	public Variavel(String variavel){
 		
-		this.id = CalculadoraAlgebrica.retiraNumero(variavel);
-		String valorCompanheiro = CalculadoraAlgebrica.retiraLetra(variavel);
+		this.id = OperacaoMatematica.retiraNumero(variavel);
+		String valorCompanheiro = OperacaoMatematica.retiraLetra(variavel);
 		
 		if(!valorCompanheiro.isEmpty()){
 			this.setValorCompanheiro(Integer.valueOf(valorCompanheiro));

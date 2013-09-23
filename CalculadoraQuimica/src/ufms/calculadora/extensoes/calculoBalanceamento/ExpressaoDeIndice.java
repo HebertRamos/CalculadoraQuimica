@@ -54,6 +54,7 @@ public class ExpressaoDeIndice {
 	public ExpressaoAlgebrica geraExpressaoAlgebrica(){
 		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
 		
+		expressaoAlgebrica.setOperacao(EnumOperacaoesCalculadoraAlgebrica.SOMA);
 		for (int i = 0; i < this.listaIndiceReagente.size(); i++) {
 			if(i != 0 && (i + 1)%2 == 0){
 				expressaoAlgebrica.setOperacao(EnumOperacaoesCalculadoraAlgebrica.SOMA);
@@ -62,7 +63,7 @@ public class ExpressaoDeIndice {
 		}
 		
 		expressaoAlgebrica.setOperacao(EnumOperacaoesCalculadoraAlgebrica.IGUALDADE);
-		
+		expressaoAlgebrica.setOperacao(EnumOperacaoesCalculadoraAlgebrica.SOMA);
 		for (int i = 0; i < this.listaIndiceProduto.size(); i++) {
 			if(i != 0 && (i + 1)%2 == 0){
 				expressaoAlgebrica.setOperacao(EnumOperacaoesCalculadoraAlgebrica.SOMA);

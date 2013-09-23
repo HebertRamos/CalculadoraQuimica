@@ -54,6 +54,8 @@ public enum EnumOperacaoesCalculadoraAlgebrica {
 	public static String getSimboloInversoOperacao(EnumOperacaoesCalculadoraAlgebrica operacao){
 		if(operacao.equals(SOMA)){
 			return getSimboloOperacao(SUBTRACAO);
+		}else if(operacao.equals(SUBTRACAO)){
+			return getSimboloOperacao(SOMA);
 		}else{
 			return null;
 		}

@@ -89,6 +89,7 @@ public class MetodoAlgebrico extends CalculoBalanceamento{
 			
 			ExpressaoAlgebrica expressaoAlgebrica = listaExpressaoIndice.get(i - 1).geraExpressaoAlgebrica();
 			Variavel variavelAnterior;
+			String sinal = "+";
 			int j = i - 1;
 			
 			do{
@@ -98,7 +99,7 @@ public class MetodoAlgebrico extends CalculoBalanceamento{
 			
 			Variavel variavelAtual = listaVariaveisDasExpressoes.get(i);
 			
-			calculadoraAlgebrica.aplicaCondicao(expressaoAlgebrica, variavelAnterior);
+			calculadoraAlgebrica.aplicaCondicao(expressaoAlgebrica, variavelAnterior, sinal);
 			calculadoraAlgebrica.isolaVariavel(expressaoAlgebrica, variavelAtual.getId());
 			
 			variavelAtual = calculadoraAlgebrica.parsearParaVariavel(expressaoAlgebrica);
@@ -133,22 +134,6 @@ public class MetodoAlgebrico extends CalculoBalanceamento{
 		return variaveisDasExpressoesDeIndice;
 	}
 	
-	
-	public List<EnumSiglaElemento> carregaSiglasElementos(List<Solucao> solucoes){
-		
-		List<EnumSiglaElemento> siglasElementos = new ArrayList<EnumSiglaElemento>();
-		for (Solucao solucao : solucoes) {
-			for (Elemento elemento : solucao.getElementos()) {
-				if(!siglasElementos.contains(elemento.getSigla())){
-					siglasElementos.add(elemento.getSigla());
-				}
-			}
-			
-		}
-		
-		return siglasElementos;
-	}
-	
 	public ExpressaoDeIndice carregaExpressaoDeIndiceDoElemento(EnumSiglaElemento siglaElemento, EquacaoQuimica equacaoQuimica){
 		
 		ExpressaoDeIndice expressaoDeIndice = new ExpressaoDeIndice();
@@ -180,6 +165,8 @@ public class MetodoAlgebrico extends CalculoBalanceamento{
 			}
 			indiceSolucao++;
 		}
+		
+		expressaoDeIndice.geraExpressaoAlgebrica().toString();
 		
 		return expressaoDeIndice;
 	}

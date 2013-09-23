@@ -1,5 +1,8 @@
 package ufms.calculadora.test.extensoes;
 
+import java.util.Arrays;
+import java.util.List;
+
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
@@ -14,6 +17,50 @@ import ufms.calculadora.modelo.EquacaoQuimica;
 import ufms.calculadora.modelo.Solucao;
 
 public class MetodoAlgebricoTest extends TestCase {
+	
+	
+	
+	public void testDadoUmaQuacaoQuimicaDaAguaRetornaAoCarregarAsSiglasDosElementosDeveRetornar_H_O(){
+	
+		// REAGENTES
+				Elemento oxigenioRT = new Elemento();
+				oxigenioRT.setSigla(EnumSiglaElemento.O);
+
+				Solucao reagente1T = new Solucao();
+				reagente1T.adicionarElemento(oxigenioRT);
+
+				Elemento hidrogenioRT = new Elemento();
+				hidrogenioRT.setSigla(EnumSiglaElemento.H);
+				hidrogenioRT.setCoeficiente(2);
+
+				Solucao reagente2T = new Solucao();
+				reagente2T.adicionarElemento(hidrogenioRT);
+
+				// PRODUTO
+				Elemento oxigenioPT = new Elemento();
+				oxigenioPT.setSigla(EnumSiglaElemento.O);
+
+				Elemento hidrogenioPT = new Elemento();
+				hidrogenioPT.setSigla(EnumSiglaElemento.H);
+				hidrogenioPT.setCoeficiente(2);
+
+				Solucao produtoT = new Solucao();
+				produtoT.adicionarElemento(oxigenioPT);
+				produtoT.adicionarElemento(hidrogenioPT);
+
+				EquacaoQuimica equacaoQuimicaTest = new EquacaoQuimica();
+				equacaoQuimicaTest.adicionarReagente(reagente1T);
+				equacaoQuimicaTest.adicionarReagente(reagente2T);
+				equacaoQuimicaTest.adicionarProduto(produtoT);
+
+				CalculoBalanceamento calculoBalanceamento = new MetodoAlgebrico();
+				
+				List<EnumSiglaElemento> listaResultado = calculoBalanceamento.carregaSiglasElementos(equacaoQuimicaTest.getReagentes());
+				List<EnumSiglaElemento> listaEsperada =  Arrays.asList(new EnumSiglaElemento[]{EnumSiglaElemento.O, EnumSiglaElemento.H});
+				
+				Assert.assertEquals(listaEsperada, listaResultado);
+
+	}
 
 	
 	
