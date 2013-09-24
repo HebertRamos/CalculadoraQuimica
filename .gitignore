@@ -6,6 +6,8 @@
 .project
 .metadata
 bin/
+CalculadoraQuimica/bin/
+CalculadoraQuimica/.project
 tmp/
 *.tmp
 *.bak
