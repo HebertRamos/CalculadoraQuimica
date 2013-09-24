@@ -23,8 +23,8 @@ public class MetodoAlgebricoTest extends TestCase {
 	public void testDadoUmaQuacaoQuimicaDaAguaRetornaAoCarregarAsSiglasDosElementosDeveRetornar_H_O(){
 	
 		// REAGENTES
-				Elemento oxigenioRT = new Elemento();
-				oxigenioRT.setSigla(EnumSiglaElemento.O);
+		Elemento oxigenioRT = new Elemento();
+		oxigenioRT.setSigla(EnumSiglaElemento.O);
 
 				Solucao reagente1T = new Solucao();
 				reagente1T.adicionarElemento(oxigenioRT);
@@ -136,6 +136,10 @@ public class MetodoAlgebricoTest extends TestCase {
 		try {
 			equacaoBalanceada = calculoBalanceamento.balancearEquacao(equacaoQuimicaTest);
 		} catch (OperacaoNaoSuportadaException e) {
+			Assert.fail(e.getMessage());
+			return;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			Assert.fail(e.getMessage());
 			return;
 		}
@@ -259,6 +263,10 @@ public class MetodoAlgebricoTest extends TestCase {
 		} catch (OperacaoNaoSuportadaException e) {
 			Assert.fail(e.getMessage());
 			return;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			Assert.fail(e.getMessage());
+			return;
 		}
 
 		Assert.assertEquals(true, equacaoBalanceada.equals(equacaoEsperada));
@@ -333,6 +341,7 @@ public class MetodoAlgebricoTest extends TestCase {
 
 		Elemento oxigenioER1 = new Elemento();
 		oxigenioER1.setSigla(EnumSiglaElemento.O);
+		oxigenioER1.setCoeficiente(4);
 
 		Solucao reagenteE1 = new Solucao();
 		reagenteE1.adicionarElemento(ferroER1);
@@ -352,13 +361,14 @@ public class MetodoAlgebricoTest extends TestCase {
 		// PRODUTO
 		Elemento ferroEP1 = new Elemento();
 		ferroEP1.setSigla(EnumSiglaElemento.Fe);
-
+		
 		Elemento oxigenioEP1 = new Elemento();
 		oxigenioEP1.setSigla(EnumSiglaElemento.O);
 
 		Solucao produtoE1 = new Solucao();
 		produtoE1.adicionarElemento(ferroEP1);
 		produtoE1.adicionarElemento(oxigenioEP1);
+		produtoE1.setIndice(3);
 
 		Elemento carbonoEP1 = new Elemento();
 		carbonoEP1.setSigla(EnumSiglaElemento.C);
@@ -384,8 +394,13 @@ public class MetodoAlgebricoTest extends TestCase {
 		} catch (OperacaoNaoSuportadaException e) {
 			Assert.fail(e.getMessage());
 			return;
+		} catch (Exception e) {
+				System.out.println(e.getMessage());
+				Assert.fail(e.getMessage());
+				return;
 		}
-
+		
+		System.out.println(equacaoBalanceada);
 		Assert.assertEquals(true, equacaoBalanceada.equals(equacaoEsperada));
 	}
 

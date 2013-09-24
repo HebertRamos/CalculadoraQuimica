@@ -20,7 +20,7 @@ public class CalculoBalanceamento{
 		
 	}
 
-	public EquacaoQuimica balancearEquacao(EquacaoQuimica equacaoQuimica) throws OperacaoNaoSuportadaException {
+	public EquacaoQuimica balancearEquacao(EquacaoQuimica equacaoQuimica) throws OperacaoNaoSuportadaException, Exception {
 		return null;
 	}
 	

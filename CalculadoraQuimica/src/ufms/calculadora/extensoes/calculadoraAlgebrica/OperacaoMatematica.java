@@ -38,7 +38,7 @@ public class OperacaoMatematica {
 
 	public static boolean contemLetra(String entrada) {
 
-		return entrada.matches(".*\\w.*");
+		return !retiraLetra(entrada).equals(entrada);
 	}
 
 	public static String retiraLetra(String entrada) {

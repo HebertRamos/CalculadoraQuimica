@@ -50,7 +50,7 @@ public class CalculadoraAlgebrica {
 		}
 
 		Integer valorCompanheiro = Integer.valueOf(expressaoAlgebrica.getLadoEsquerdo().get(1).replace(identificadorVariavel, ""));
-		if (expressaoAlgebrica.getLadoDireito().size() == 2 && !OperacaoMatematica.contemLetra(expressaoAlgebrica.getLadoDireito().get(0)) && valorCompanheiro != 1) {
+		if (expressaoAlgebrica.getLadoDireito().size() == 2 && !OperacaoMatematica.contemLetra(expressaoAlgebrica.getLadoDireito().get(1)) && valorCompanheiro != 1) {
 		
 			Integer valorResultante = Integer.valueOf(expressaoAlgebrica.getLadoDireito().get(1)) / valorCompanheiro;
 			expressaoAlgebrica.getLadoDireito().set(1, String.valueOf(valorResultante));
@@ -77,7 +77,6 @@ public class CalculadoraAlgebrica {
 				if (expressaoAlgebrica2.getListaVariavel().size() == 2 && expressaoAlgebrica2.getListaVariavel().contains(outraVariavel)) {
 
 					expressaoAlgebrica1 = this.isolaVariavel(expressaoAlgebrica1, outraVariavel.getId());
-					
 					
 					expressaoAlgebrica2 = this.aplicaCondicao(expressaoAlgebrica2, outraVariavel, expressaoAlgebrica1);
 					
@@ -150,22 +149,71 @@ public class CalculadoraAlgebrica {
 	 */
 	public Variavel parsearParaVariavel(ExpressaoAlgebrica expressaoAlgebrica) {
 
-		expressaoAlgebrica.getLadoEsquerdo().set(1,
-				expressaoAlgebrica.getLadoEsquerdo().get(1).replace("1", ""));
-
-		if (expressaoAlgebrica.getLadoEsquerdo().size() == 2
-				&& expressaoAlgebrica.getLadoDireito().size() == 2
-				&& !expressaoAlgebrica.getLadoEsquerdo().get(1)
-						.matches(".*\\d.*")) {
+		
+		if (this.expressaoPodeSerParseadaParaVariavelEsquerda(expressaoAlgebrica)) {
 			Variavel var = new Variavel();
-			var.setId(expressaoAlgebrica.getLadoEsquerdo().get(1));
-			var.setValor(Integer.valueOf(expressaoAlgebrica.getLadoDireito()
-					.get(1)));
+			var.setId(expressaoAlgebrica.getLadoEsquerdo().get(1).replace("1", ""));
+			var.setValor(Integer.valueOf(expressaoAlgebrica.getLadoDireito().get(1)));
+			return var;
+		}else if(this.expressaoPodeSerParseadaParaVariavelDireita(expressaoAlgebrica)){
+			Variavel var = new Variavel();
+			var.setId(expressaoAlgebrica.getLadoDireito().get(1).replace("1", ""));
+			var.setValor(Integer.valueOf(expressaoAlgebrica.getLadoEsquerdo().get(1)));
 			return var;
 		}
 
 		return null;
 
+	}
+	
+	public boolean expressaoPodeSerParseadaParaVariavelEsquerda(ExpressaoAlgebrica expressaoAlgebrica){
+		
+		String valorAntigoLadoDireito = expressaoAlgebrica.getLadoDireito().get(1);
+		String valorAntigoLadoEsquerdo = expressaoAlgebrica.getLadoEsquerdo().get(1);
+		
+		if(expressaoAlgebrica.getListaVariavel().size() == 1) {
+			Integer valorCompanheiro = Integer.valueOf(expressaoAlgebrica.getLadoEsquerdo().get(1).replace(expressaoAlgebrica.getListaVariavel().get(0).getId(), ""));
+			if (expressaoAlgebrica.getLadoDireito().size() == 2 && !OperacaoMatematica.contemLetra(expressaoAlgebrica.getLadoDireito().get(1)) && valorCompanheiro != 1) {
+			
+				Integer valorResultante = Integer.valueOf(expressaoAlgebrica.getLadoDireito().get(1)) / valorCompanheiro;
+				expressaoAlgebrica.getLadoDireito().set(1, String.valueOf(valorResultante));
+				
+				expressaoAlgebrica.getLadoEsquerdo().set(1, "1"+expressaoAlgebrica.getListaVariavel().get(0).getId());
+			}
+		}
+		
+		if(expressaoAlgebrica.getLadoEsquerdo().size() == 2 && expressaoAlgebrica.getLadoDireito().size() == 2 && OperacaoMatematica.retiraLetra(expressaoAlgebrica.getLadoEsquerdo().get(1)).equals("1") && OperacaoMatematica.retiraNumero(expressaoAlgebrica.getLadoDireito().get(1)).equals("")){
+			return true;
+		}else{
+			expressaoAlgebrica.getLadoDireito().set(1, valorAntigoLadoDireito);
+			expressaoAlgebrica.getLadoEsquerdo().set(1, valorAntigoLadoEsquerdo);
+			return false;
+		}
+	}
+	
+	public boolean expressaoPodeSerParseadaParaVariavelDireita(ExpressaoAlgebrica expressaoAlgebrica){
+		
+		String valorAntigoLadoDireito = expressaoAlgebrica.getLadoDireito().get(1);
+		String valorAntigoLadoEsquerdo = expressaoAlgebrica.getLadoEsquerdo().get(1);
+		
+		if(expressaoAlgebrica.getListaVariavel().size() == 1) {
+			Integer valorCompanheiro = Integer.valueOf(expressaoAlgebrica.getLadoDireito().get(1).replace(expressaoAlgebrica.getListaVariavel().get(0).getId(), ""));
+			if (expressaoAlgebrica.getLadoEsquerdo().size() == 2 && !OperacaoMatematica.contemLetra(expressaoAlgebrica.getLadoEsquerdo().get(1)) && valorCompanheiro != 1) {
+			
+				Integer valorResultante = Integer.valueOf(expressaoAlgebrica.getLadoEsquerdo().get(1)) / valorCompanheiro;
+				expressaoAlgebrica.getLadoEsquerdo().set(1, String.valueOf(valorResultante));
+				expressaoAlgebrica.getLadoDireito().set(1, "1"+expressaoAlgebrica.getListaVariavel().get(0).getId());
+			}
+		}
+		
+		if(expressaoAlgebrica.getLadoDireito().size() == 2 && expressaoAlgebrica.getLadoEsquerdo().size() == 2 && OperacaoMatematica.retiraLetra(expressaoAlgebrica.getLadoDireito().get(1)).equals("1") && OperacaoMatematica.retiraNumero(expressaoAlgebrica.getLadoEsquerdo().get(1)).equals("")){
+			return true;
+		}else{
+			expressaoAlgebrica.getLadoDireito().set(1, valorAntigoLadoDireito);
+			expressaoAlgebrica.getLadoEsquerdo().set(1, valorAntigoLadoEsquerdo);
+			return false;
+		}
+		
 	}
 
 	/**
@@ -335,6 +383,8 @@ public class CalculadoraAlgebrica {
 		if (variavelCondicao != null) {
 			aplicaCondicao(expressaoAlgebrica.getLadoEsquerdo(), variavelCondicao, sinal);
 			aplicaCondicao(expressaoAlgebrica.getLadoDireito(), variavelCondicao, sinal);
+			
+			expressaoAlgebrica.getListaVariavel().remove(variavelCondicao);
 		}
 		return expressaoAlgebrica;
 	}
@@ -349,6 +399,8 @@ public class CalculadoraAlgebrica {
 			
 			novoLado = aplicaCondicao(expressaoAlgebrica.getLadoDireito(), variavelCondicao, expressaoAlgebricaCondicao);
 			expressaoAlgebrica.setLadoDireito(novoLado);
+			
+			expressaoAlgebrica.getListaVariavel().remove(variavelCondicao);
 		}
 		return expressaoAlgebrica;
 	}
@@ -424,6 +476,7 @@ public class CalculadoraAlgebrica {
 				}
 				
 				lado.set(posicao, String.valueOf(valorCompanheiro));
+				
 			}
 			posicao++;
 		}

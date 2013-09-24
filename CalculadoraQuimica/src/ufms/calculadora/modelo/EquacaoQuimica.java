@@ -38,22 +38,30 @@ public class EquacaoQuimica {
 	
 	public String toString(){
 		String saida = "";
+		Integer indice = 0;
 		for (Solucao reagente : this.reagentes) {
 			for (Elemento elemento : reagente.getElementos()) {
 				saida += elemento.getSigla().name();
 			}
 			
-			saida += " + ";
+			if(indice < this.reagentes.size() - 1){
+				saida += " + ";
+			}
+			indice++;
 		}
 		
 		saida += " => ";
 		
+		indice = 0;
 		for (Solucao reagente : this.produtos) {
 			for (Elemento elemento : reagente.getElementos()) {
 				saida += elemento.getSigla().name();
 			}
 			
-			saida += " + ";
+			if(indice < this.produtos.size() - 1){
+				saida += " + ";
+			}
+			indice++;
 		}
 		
 		return saida;
