@@ -5,41 +5,46 @@ public class Variavel {
 	private String id;
 	private Integer valor = 0;
 	private Integer valorCompanheiro = 1;
-	
-	
-	public Variavel(){}
-	
-	public Variavel(String variavel){
-		
+
+	public Variavel() {
+	}
+
+	public Variavel(String variavel) {
+
 		this.id = OperacaoMatematica.retiraNumero(variavel);
 		String valorCompanheiro = OperacaoMatematica.retiraLetra(variavel);
-		
-		if(!valorCompanheiro.isEmpty()){
+
+		if (!valorCompanheiro.isEmpty()) {
 			this.setValorCompanheiro(Integer.valueOf(valorCompanheiro));
 		}
 	}
-	
+
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public Integer getValor() {
 		return valor;
 	}
+
 	public void setValor(Integer valor) {
 		this.valor = valor;
 	}
+
 	public Integer getValorCompanheiro() {
 		return valorCompanheiro;
 	}
+
 	public void setValorCompanheiro(Integer valorCompanheiro) {
 		this.valorCompanheiro = valorCompanheiro;
 	}
-	
-	public String toString(){
-		return (valorCompanheiro != null && valorCompanheiro != 1   ? valorCompanheiro : "")+id+"="+(valor != null ? valor : "?");
+
+	public String toString() {
+		return (valorCompanheiro != null && valorCompanheiro != 1 ? valorCompanheiro : "") + id + "=" + (valor != null ? valor : "?");
 	}
 
 	@Override

@@ -4,24 +4,22 @@ public class OperacaoMatematica {
 
 	/**
 	 * Dois Inteiros
-	 * 
 	 * @param alg1
 	 * @param alg2
 	 * @return
 	 */
-	public String executaOperacao(Integer alg1, Integer alg2){
+	public String executaOperacao(Integer alg1, Integer alg2) {
 		return "";
 	}
-	
+
 	/**
 	 * Duas Variaveis
-	 * 
 	 * @param alg1
 	 * @param alg2
 	 * @return
-	 * @throws OperacaoNaoSuportadaException 
+	 * @throws OperacaoNaoSuportadaException
 	 */
-	public String executaOperacao(String alg1, String alg2) throws OperacaoNaoSuportadaException{
+	public String executaOperacao(String alg1, String alg2) throws OperacaoNaoSuportadaException {
 		return "";
 	}
 
