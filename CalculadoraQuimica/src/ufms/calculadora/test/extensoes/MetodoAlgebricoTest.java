@@ -131,6 +131,7 @@ public class MetodoAlgebricoTest extends TestCase {
 		EquacaoQuimica equacaoBalanceada;
 		try {
 			equacaoBalanceada = calculoBalanceamento.balancearEquacao(equacaoQuimicaTest);
+
 		} catch (OperacaoNaoSuportadaException e) {
 			Assert.fail(e.getMessage());
 			return;
@@ -391,115 +392,28 @@ public class MetodoAlgebricoTest extends TestCase {
 	
 	@Test
 	public void testDadoUmaQuacaoBalancear3() {
-		/** Equação Test **/
-		// REAGENTES
-		Elemento carbonoTR1 = new Elemento(EnumSiglaElemento.C);
-		carbonoTR1.setCoeficiente(2);
-		
-		Elemento hidrogenioTR1 = new Elemento(EnumSiglaElemento.H);
-		hidrogenioTR1.setCoeficiente(6);
-
-		Elemento oxigenioTR1 = new Elemento(EnumSiglaElemento.O);
-		
-		Solucao reagenteT1 = new Solucao();
-		reagenteT1.adicionarElemento(carbonoTR1);
-		reagenteT1.adicionarElemento(hidrogenioTR1);
-		reagenteT1.adicionarElemento(oxigenioTR1);
-		
-		Elemento oxigenioTR2 = new Elemento(EnumSiglaElemento.O);
-		oxigenioTR2.setCoeficiente(2);
-
-		Solucao reagenteT2 = new Solucao();
-		reagenteT2.adicionarElemento(oxigenioTR2);
-
-		// PRODUTO
-		Elemento carbonoTP1 = new Elemento(EnumSiglaElemento.C);
-		
-		Elemento oxigenioTP1 = new Elemento(EnumSiglaElemento.O);
-		oxigenioTP1.setCoeficiente(2);
-
-		Solucao produtoT1 = new Solucao();
-		produtoT1.adicionarElemento(carbonoTP1);
-		produtoT1.adicionarElemento(oxigenioTP1);
-
-		Elemento hidrogenioTP1 = new Elemento(EnumSiglaElemento.H);
-		hidrogenioTP1.setCoeficiente(2);
-
-		Elemento oxigenioTP2 = new Elemento(EnumSiglaElemento.O);
-		
-		Solucao produtoT2 = new Solucao();
-		produtoT2.adicionarElemento(hidrogenioTP1);
-		produtoT2.adicionarElemento(oxigenioTP2);
-
-		EquacaoQuimica equacaoQuimicaTest = new EquacaoQuimica();
-		equacaoQuimicaTest.adicionarReagente(reagenteT1);
-		equacaoQuimicaTest.adicionarReagente(reagenteT2);
-		equacaoQuimicaTest.adicionarProduto(produtoT1);
-		equacaoQuimicaTest.adicionarProduto(produtoT2);
 		
 		/** Equação Esperada **/
 		// REAGENTES
 		Elemento carbonoER1 = new Elemento(EnumSiglaElemento.C);
-		carbonoER1.setCoeficiente(2);
-		
-		Elemento hidrogenioER1 = new Elemento(EnumSiglaElemento.H);
-		hidrogenioER1.setCoeficiente(6);
-
-		Elemento oxigenioER1 = new Elemento(EnumSiglaElemento.O);
-		
 		Solucao reagenteE1 = new Solucao();
 		reagenteE1.adicionarElemento(carbonoER1);
-		reagenteE1.adicionarElemento(hidrogenioER1);
-		reagenteE1.adicionarElemento(oxigenioER1);
-		
-		Elemento oxigenioER2 = new Elemento(EnumSiglaElemento.O);
-		oxigenioER2.setCoeficiente(2);
 
-		Solucao reagenteE2 = new Solucao();
-		reagenteE2.adicionarElemento(oxigenioTR2);
-		reagenteE2.setIndice(3);
+		
 
 		// PRODUTO
 		Elemento carbonoEP1 = new Elemento(EnumSiglaElemento.C);
-		
-		Elemento oxigenioEP1 = new Elemento(EnumSiglaElemento.O);
-		oxigenioEP1.setCoeficiente(2);
-
 		Solucao produtoE1 = new Solucao();
 		produtoE1.adicionarElemento(carbonoEP1);
-		produtoE1.adicionarElemento(oxigenioEP1);
-		produtoE1.setIndice(2);
 
-		Elemento hidrogenioEP1 = new Elemento(EnumSiglaElemento.H);
-		hidrogenioEP1.setCoeficiente(2);
 
-		Elemento oxigenioEP2 = new Elemento(EnumSiglaElemento.O);
+		EquacaoQuimica equacao = new EquacaoQuimica();
+		equacao.adicionarReagente(reagenteE1);
+		equacao.adicionarProduto(produtoE1);
 		
-		Solucao produtoE2 = new Solucao();
-		produtoE2.adicionarElemento(hidrogenioEP1);
-		produtoE2.adicionarElemento(oxigenioEP2);
-		produtoE2.setIndice(3);
-
-		EquacaoQuimica equacaoEsperada = new EquacaoQuimica();
-		equacaoEsperada.adicionarReagente(reagenteE1);
-		equacaoEsperada.adicionarReagente(reagenteE2);
-		equacaoEsperada.adicionarProduto(produtoE1);
-		equacaoEsperada.adicionarProduto(produtoE2);
+		System.out.println(equacao.toString());
 		
-		CalculoBalanceamento calculoBalanceamento = new MetodoAlgebrico();
-		EquacaoQuimica equacaoBalanceada;
-		try {
-			equacaoBalanceada = calculoBalanceamento.balancearEquacao(equacaoQuimicaTest);
-		} catch (OperacaoNaoSuportadaException e) {
-			Assert.fail(e.getMessage());
-			return;
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			Assert.fail(e.getMessage());
-			return;
-		}
-		
-		Assert.assertEquals(equacaoEsperada, equacaoBalanceada);
+	
 	}
 	
 	@Test
@@ -565,6 +479,7 @@ public class MetodoAlgebricoTest extends TestCase {
 		EquacaoQuimica equacaoBalanceada;
 		try {
 			equacaoBalanceada = calculoBalanceamento.balancearEquacao(equacaoQuimicaTest);
+
 		} catch (OperacaoNaoSuportadaException e) {
 			Assert.fail(e.getMessage());
 			return;
