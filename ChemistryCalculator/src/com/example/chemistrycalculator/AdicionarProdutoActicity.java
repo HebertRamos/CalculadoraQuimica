@@ -28,10 +28,7 @@ public class AdicionarProdutoActicity extends Activity {
 	@Override
 	public void finish() {
 		Intent data = new Intent();
-
-		EditText inputText = (EditText) findViewById(R.id.inputSolucao);
-		String returnString = inputText.getText().toString();
-		data.putExtra("solucao", returnString);
+		data.putExtra("solucaoAtual", solucaoAtual);
 		setResult(RESULT_OK, data);
 		super.finish();
 	}
@@ -44,8 +41,7 @@ public class AdicionarProdutoActicity extends Activity {
 	}
 
 	public void adicionarElemento(View v) {
-		Intent trocatela = new Intent(AdicionarProdutoActicity.this, TabelaPeriodicaActivity.class);
-		AdicionarProdutoActicity.this.startActivity(trocatela);
+		Intent trocatela = new Intent(this, TabelaPeriodicaActivity.class);
 		startActivityForResult(trocatela, 100);
 	}
 
@@ -56,11 +52,11 @@ public class AdicionarProdutoActicity extends Activity {
 			
 			EditText inputText = (EditText) findViewById(R.id.inputSolucao);
 			if(inputText.getText().length() != 0){
-				inputText.append(" + ");
+				//inputText.append(" + ");
 			}
 			
 			inputText.append(elementoSelecionado.getSigla().name());
-			
+			solucaoAtual.adicionarElemento(elementoSelecionado);
 		}
 	}
 
