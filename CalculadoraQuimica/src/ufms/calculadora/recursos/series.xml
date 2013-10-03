@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<series>
+   <serie nome="metaisAlcalinos">
+      <siglaElemento>Cs</siglaElemento>
+      <siglaElemento>Fr</siglaElemento>
+      <siglaElemento>K</siglaElemento>
+      <siglaElemento>Li</siglaElemento>
+      <siglaElemento>Na</siglaElemento>
+      <siglaElemento>Rb</siglaElemento>
+   </serie>
+   <serie nome="metaisAlcalinoTerrosos">
+      <siglaElemento>Ba</siglaElemento>
+      <siglaElemento>Be</siglaElemento>
+      <siglaElemento>Ca</siglaElemento>
+      <siglaElemento>Mg</siglaElemento>
+      <siglaElemento>Ra</siglaElemento>
+      <siglaElemento>Sr</siglaElemento>
+   </serie>
+   <serie nome="lantanideos">
+      <siglaElemento>Ce</siglaElemento>
+      <siglaElemento>Dy</siglaElemento>
+      <siglaElemento>Er</siglaElemento>
+      <siglaElemento>Eu</siglaElemento>
+      <siglaElemento>Gd</siglaElemento>
+      <siglaElemento>Ho</siglaElemento>
+      <siglaElemento>La</siglaElemento>
+      <siglaElemento>Lu</siglaElemento>
+      <siglaElemento>Nd</siglaElemento>
+      <siglaElemento>Pm</siglaElemento>
+      <siglaElemento>Pr</siglaElemento>
+      <siglaElemento>Sm</siglaElemento>
+      <siglaElemento>Tb</siglaElemento>
+      <siglaElemento>Tm</siglaElemento>
+      <siglaElemento>Yb</siglaElemento>
+   </serie>
+   <serie nome="actinideos">
+      <siglaElemento>Ac</siglaElemento>
+      <siglaElemento>Am</siglaElemento>
+      <siglaElemento>Bk</siglaElemento>
+      <siglaElemento>Cf</siglaElemento>
+      <siglaElemento>Cm</siglaElemento>
+      <siglaElemento>Es</siglaElemento>
+      <siglaElemento>Fl</siglaElemento>
+      <siglaElemento>Lr</siglaElemento>
+      <siglaElemento>Lv</siglaElemento>
+      <siglaElemento>No</siglaElemento>
+      <siglaElemento>Np</siglaElemento>
+      <siglaElemento>Pa</siglaElemento>
+      <siglaElemento>Pu</siglaElemento>
+      <siglaElemento>Th</siglaElemento>
+      <siglaElemento>U</siglaElemento>
+   </serie>
+   <serie nome="metaisDeTransicao">
+      <siglaElemento>Ag</siglaElemento>
+      <siglaElemento>Au</siglaElemento>
+      <siglaElemento>Bh</siglaElemento>
+      <siglaElemento>Cd</siglaElemento>
+      <siglaElemento>Cn</siglaElemento>
+      <siglaElemento>Co</siglaElemento>
+      <siglaElemento>Cr</siglaElemento>
+      <siglaElemento>Cu</siglaElemento>
+      <siglaElemento>Db</siglaElemento>
+      <siglaElemento>Ds</siglaElemento>
+      <siglaElemento>Fe</siglaElemento>
+      <siglaElemento>Hf</siglaElemento>
+      <siglaElemento>Hg</siglaElemento>
+      <siglaElemento>Hs</siglaElemento>
+      <siglaElemento>Ir</siglaElemento>
+      <siglaElemento>Mn</siglaElemento>
+      <siglaElemento>Mo</siglaElemento>
+      <siglaElemento>Mt</siglaElemento>
+      <siglaElemento>Nb</siglaElemento>
+      <siglaElemento>Ni</siglaElemento>
+      <siglaElemento>Os</siglaElemento>
+      <siglaElemento>Pd</siglaElemento>
+      <siglaElemento>Pt</siglaElemento>
+      <siglaElemento>Re</siglaElemento>
+      <siglaElemento>Rf</siglaElemento>
+      <siglaElemento>Rg</siglaElemento>
+      <siglaElemento>Rh</siglaElemento>
+      <siglaElemento>Ru</siglaElemento>
+      <siglaElemento>Sc</siglaElemento>
+      <siglaElemento>Sg</siglaElemento>
+      <siglaElemento>Ta</siglaElemento>
+      <siglaElemento>Tc</siglaElemento>
+      <siglaElemento>Ti</siglaElemento>
+      <siglaElemento>Uuo</siglaElemento>
+      <siglaElemento>V</siglaElemento>
+      <siglaElemento>W</siglaElemento>
+      <siglaElemento>Y</siglaElemento>
+      <siglaElemento>Zn</siglaElemento>
+      <siglaElemento>Zr</siglaElemento>
+   </serie>
+   <serie nome="outrosMetais">
+      <siglaElemento>Al</siglaElemento>
+      <siglaElemento>Bi</siglaElemento>
+      <siglaElemento>Fm</siglaElemento>
+      <siglaElemento>Ga</siglaElemento>
+      <siglaElemento>In</siglaElemento>
+      <siglaElemento>Pb</siglaElemento>
+      <siglaElemento>Sn</siglaElemento>
+      <siglaElemento>Tl</siglaElemento>
+      <siglaElemento>Uup</siglaElemento>
+      <siglaElemento>Uut</siglaElemento>
+   </serie>
+   <serie nome="metaloides">
+      <siglaElemento>As</siglaElemento>
+      <siglaElemento>B</siglaElemento>
+      <siglaElemento>Ge</siglaElemento>
+      <siglaElemento>Po</siglaElemento>
+      <siglaElemento>Sb</siglaElemento>
+      <siglaElemento>Si</siglaElemento>
+      <siglaElemento>Te</siglaElemento>
+   </serie>
+   <serie nome="naoMetais">
+      <siglaElemento>C</siglaElemento>
+      <siglaElemento>H</siglaElemento>
+      <siglaElemento>N</siglaElemento>
+      <siglaElemento>O</siglaElemento>
+      <siglaElemento>P</siglaElemento>
+      <siglaElemento>S</siglaElemento>
+      <siglaElemento>Se</siglaElemento>
+   </serie>
+   <serie nome="halogenios">
+      <siglaElemento>At</siglaElemento>
+      <siglaElemento>Br</siglaElemento>
+      <siglaElemento>Cl</siglaElemento>
+      <siglaElemento>F</siglaElemento>
+      <siglaElemento>I</siglaElemento>
+   </serie>
+   <serie nome="gasesNobres">
+      <siglaElemento>Ar</siglaElemento>
+      <siglaElemento>He</siglaElemento>
+      <siglaElemento>Kr</siglaElemento>
+      <siglaElemento>Md</siglaElemento>
+      <siglaElemento>Ne</siglaElemento>
+      <siglaElemento>Rn</siglaElemento>
+      <siglaElemento>Xe</siglaElemento>
+   </serie>
+</series>

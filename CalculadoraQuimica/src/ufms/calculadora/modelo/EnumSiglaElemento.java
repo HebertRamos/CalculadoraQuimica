@@ -443,6 +443,10 @@ public enum EnumSiglaElemento {
 	*/
 	Ds,
 	/**
+	 * Copernício
+	 */
+	Cn,
+	/**
 	*Ununúnio
 	*/
 	Rg,
@@ -462,4 +466,8 @@ public enum EnumSiglaElemento {
 	*Ununoctium.
 	*/
 	Uuo,
+	/**
+	 * Unúntrio
+	 */
+	Uut
 }
