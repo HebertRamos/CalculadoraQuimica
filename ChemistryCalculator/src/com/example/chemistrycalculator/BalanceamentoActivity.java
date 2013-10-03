@@ -45,6 +45,7 @@ public class BalanceamentoActivity extends Activity {
 
 		Intent i = new Intent(this, AdicionarProdutoActicity.class);
 		startActivityForResult(i, reagente);
+		
 	}
 
 	public void onClickAddProduto(View view) {
@@ -72,20 +73,22 @@ public class BalanceamentoActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if ((resultCode == RESULT_OK)) {
 
-			String solucao = data.getExtras().getString("solucao");
-			if (requestCode == reagente) {
-				if (!solucao.equals("")) {
-					colocaNoInput(solucao, inputReagentes);
-					montaEquacaoReagente(solucao);
-					System.out.println("Equacao Reagente montada");
-				}
-			} else if ((requestCode == produto)) {
-				if (!solucao.equals("")) {
-					colocaNoInput(solucao, inputProdutos);
-					montaEquacaoProduto(solucao);
-					System.out.println("Equacao Produto montada");
-				}
-			}
+//			String solucao = data.getExtras().getString("solucao");
+//			if (requestCode == reagente) {
+//				if (!solucao.equals("")) {
+//					colocaNoInput(solucao, inputReagentes);
+//					montaEquacaoReagente(solucao);
+//					System.out.println("Equacao Reagente montada");
+//				}
+//			} else if ((requestCode == produto)) {
+//				if (!solucao.equals("")) {
+//					colocaNoInput(solucao, inputProdutos);
+//					montaEquacaoProduto(solucao);
+//					System.out.println("Equacao Produto montada");
+//				}
+//			}
+			
+			Elemento elementoSelecionado = (Elemento) data.getExtras().getSerializable("elementoSelecionado");
 		}
 	}
 

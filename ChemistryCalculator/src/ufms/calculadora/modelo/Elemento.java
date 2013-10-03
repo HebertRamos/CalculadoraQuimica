@@ -1,7 +1,11 @@
 package ufms.calculadora.modelo;
 
-public class Elemento {
+import java.io.Serializable;
 
+public class Elemento implements Serializable{
+
+	private static final long serialVersionUID = -4301234007738653107L;
+	
 	private EnumSiglaElemento sigla;
 	private Integer indice = 1;
 	private Integer coeficiente = 1;

@@ -34,10 +34,20 @@
         android:id="@+id/btOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/inputSolucao"
         android:layout_below="@+id/inputSolucao"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:onClick="onClick"
         android:text="Ok" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btOk"
+        android:layout_alignBottom="@+id/btOk"
+        android:layout_alignLeft="@+id/inputSolucao"
+        android:onClick="adicionarElemento"
+        android:text="Adicionar Elemento" />
 
 </RelativeLayout>

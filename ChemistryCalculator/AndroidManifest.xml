@@ -36,6 +36,10 @@
             android:name="com.example.chemistrycalculator.AdicionarProdutoActicity"
             android:label="@string/title_activity_adicionar_produto" >
         </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.TabelaPeriodicaActivity"
+            android:label="@string/title_activity_tabela_periodica" >
+        </activity>
     </application>
 
 </manifest>
