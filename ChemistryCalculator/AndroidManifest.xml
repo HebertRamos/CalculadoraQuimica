@@ -33,7 +33,7 @@
                 android:value="com.example.chemistrycalculator.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.chemistrycalculator.AdicionarProdutoActicity"
+            android:name="com.example.chemistrycalculator.AdicionarSolucaoActicity"
             android:label="@string/title_activity_adicionar_produto" >
         </activity>
         <activity

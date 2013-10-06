@@ -16,7 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:hint="Equação Balanceada"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/txtReagente"
@@ -34,7 +35,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/btBalancear"
         android:layout_below="@+id/txtReagente"
-        android:ems="10" />
+        android:ems="10"
+        android:enabled="false" />
 
     <Button
         android:id="@+id/btBalancear"
@@ -52,7 +54,7 @@
         android:layout_alignLeft="@+id/btAddReagente"
         android:layout_alignTop="@+id/inputProdutos"
         android:onClick="onClickAddProduto"
-        android:text="Adiciona Solução" />
+        android:text="Adiciona Produto" />
 
     <Button
         android:id="@+id/btAddReagente"
@@ -61,7 +63,7 @@
         android:layout_alignTop="@+id/inputReagentes"
         android:layout_toRightOf="@+id/inputReagentes"
         android:onClick="onClickAddReagente"
-        android:text="Adiciona Solução" />
+        android:text="Adiciona Reagente" />
 
     <TextView
         android:id="@+id/txtProduto"
@@ -78,7 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtProduto"
         android:layout_toLeftOf="@+id/btAddProduto"
-        android:ems="10" >
+        android:ems="10"
+        android:enabled="false" >
 
         <requestFocus />
     </EditText>

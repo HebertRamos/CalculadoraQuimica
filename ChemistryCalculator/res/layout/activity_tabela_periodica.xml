@@ -8,19 +8,121 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TabelaPeriodicaActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
     <Button
         android:id="@+id/elementoH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
         android:layout_marginTop="112dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoCr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/elementoK"
+        android:layout_below="@+id/elementoK"
+        android:layout_marginTop="26dp"
+        android:text="Button" />
+
+    <EditText
+        android:id="@+id/CoeficienteElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/elementoO"
+        android:layout_alignLeft="@+id/elementoH"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_marginBottom="18dp"
+        android:ems="10" />
+    
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/CoeficienteElemento"
+        android:layout_alignLeft="@+id/elementoH"
+        android:text="Coeficiente" />
+
+    <Button
+        android:id="@+id/elementoCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/elementoO"
+        android:layout_below="@+id/elementoO"
+        android:layout_marginTop="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoMn"
+        android:layout_alignBottom="@+id/elementoMn"
+        android:layout_alignLeft="@+id/elementoH"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoCu"
+        android:layout_alignBottom="@+id/elementoCu"
+        android:layout_alignLeft="@+id/elementoC"
+        android:text="Button" />
+
+    <EditText
+        android:id="@+id/IndiceElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/CoeficienteElemento"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_toRightOf="@+id/elementoO"
+        android:ems="10" >    
+        </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/elementoO"
+        android:text="Índice" />
+
+    <Button
+        android:id="@+id/elementoFe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/elementoCl"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/elementoCu"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoMn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoCl"
+        android:layout_alignBottom="@+id/elementoCl"
+        android:layout_alignLeft="@+id/elementoFe"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/elementoMn"
+        android:layout_below="@+id/elementoMn"
+        android:layout_marginTop="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoCr"
+        android:layout_alignBottom="@+id/elementoCr"
+        android:layout_alignLeft="@+id/elementoN"
         android:text="Button" />
 
     <Button
@@ -29,7 +131,35 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/elementoH"
         android:layout_alignBottom="@+id/elementoH"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/CoeficienteElemento"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoCu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoN"
+        android:layout_alignBottom="@+id/elementoN"
+        android:layout_alignLeft="@+id/elementoCl"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elementoCr"
+        android:layout_alignBottom="@+id/elementoCr"
+        android:layout_alignLeft="@+id/elementoCu"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/elementoNa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/CoeficienteElemento"
+        android:layout_below="@+id/elementoCr"
+        android:layout_marginTop="19dp"
         android:text="Button" />
 
 </RelativeLayout>

@@ -2,8 +2,6 @@ package com.example.chemistrycalculator;
 
 import ufms.calculadora.extensoes.calculoBalanceamento.CalculoBalanceamento;
 import ufms.calculadora.extensoes.calculoBalanceamento.MetodoAlgebrico;
-import ufms.calculadora.modelo.Elemento;
-import ufms.calculadora.modelo.EnumSiglaElemento;
 import ufms.calculadora.modelo.EquacaoQuimica;
 import ufms.calculadora.modelo.Solucao;
 import android.app.Activity;
@@ -42,14 +40,14 @@ public class BalanceamentoActivity extends Activity {
 
 	public void onClickAddReagente(View view) {
 
-		Intent i = new Intent(this, AdicionarProdutoActicity.class);
+		Intent i = new Intent(this, AdicionarSolucaoActicity.class);
 		startActivityForResult(i, reagente);
 
 	}
 
 	public void onClickAddProduto(View view) {
 
-		Intent i = new Intent(this, AdicionarProdutoActicity.class);
+		Intent i = new Intent(this, AdicionarSolucaoActicity.class);
 		startActivityForResult(i, produto);
 	}
 
@@ -57,15 +55,15 @@ public class BalanceamentoActivity extends Activity {
 		CalculoBalanceamento calculoBalanceamento = new MetodoAlgebrico();
 		EquacaoQuimica equacaoBalanceada;
 		System.out.println(equacaoQuimica.toString());
-		 try {
-		
-		 equacaoBalanceada = calculoBalanceamento
-		 .balancearEquacao(equacaoQuimica);
-		 txtResultado.setText(equacaoBalanceada.toString());
-		 } catch (Exception ex) {
-		 System.out.println("erro");
-		 }
-		 System.out.println("sai!");
+		try {
+
+			equacaoBalanceada = calculoBalanceamento
+					.balancearEquacao(equacaoQuimica);
+			txtResultado.setText(equacaoBalanceada.toString());
+		} catch (Exception ex) {
+			System.out.println("erro");
+		}
+		System.out.println("sai!");
 
 	}
 
@@ -80,9 +78,15 @@ public class BalanceamentoActivity extends Activity {
 					if (inputReagentes.getText().length() != 0) {
 						inputReagentes.append(" + ");
 					}
-					for (int i = 0; i < solucao.getElementos().size()-1; i++) {
+					for (int i = 0; i < solucao.getElementos().size(); i++) {
+						inputReagentes.append(solucao.getElementos().get(i)
+								.getIndice().toString()
+								+ "(");
 						inputReagentes.append(solucao.getElementos().get(i)
 								.getSigla().toString());
+						inputReagentes.append(") "
+								+ solucao.getElementos().get(i)
+										.getCoeficiente().toString());
 					}
 					System.out.println("Equacao Reagente modificada");
 				}
@@ -92,95 +96,19 @@ public class BalanceamentoActivity extends Activity {
 					if (inputProdutos.getText().length() != 0) {
 						inputProdutos.append(" + ");
 					}
-					for (int i = 0; i < solucao.getElementos().size()-1; i++) {
+					for (int i = 0; i < solucao.getElementos().size(); i++) {
+						inputProdutos.append(solucao.getElementos().get(i)
+								.getIndice().toString()
+								+ "(");
 						inputProdutos.append(solucao.getElementos().get(i)
 								.getSigla().toString());
+						inputProdutos.append(") "
+								+ solucao.getElementos().get(i)
+										.getCoeficiente().toString());
 					}
 					System.out.println("Equacao Produto montada");
 				}
 			}
-		}
-	}
-
-	// public void montaEquacaoReagente(String text) {
-	// String elementoTemp = "";
-	// Integer coeficienteTemp = 0;
-	// Solucao solucao = new Solucao();
-	// char[] sol;
-	// sol = text.toCharArray();
-	// Elemento elemento = null;
-	// for (int i = 0; i < sol.length; i++) {
-	// if (Character.isLetter(sol[i])) {
-	// if (Character.isUpperCase(sol[i])) {
-	// elementoTemp = Character.toString(sol[i]);
-	// if (i + 1 < sol.length) {
-	// if (Character.isLowerCase(sol[i + 1])) {
-	// elementoTemp = elementoTemp
-	// + Character.toString(sol[i + 1]);
-	// i++;
-	// }
-	// }
-	// }
-	// EnumSiglaElemento[] enus = EnumSiglaElemento.values();
-	// for (EnumSiglaElemento enu : enus) {
-	// if (enu.name().toUpperCase().equals(elementoTemp)) {
-	//
-	// // o Elemento
-	// elemento = new Elemento(enu.valueOf(elementoTemp));
-	// System.out.println("Novo Elemento Encontrado: " + elemento.getSigla());
-	//
-	// // a solucao
-	// solucao.adicionarElemento(elemento);
-	// // System.out.println("SOLUCAO: " + solucao.toString());
-	// }
-	// }
-	// } else if (Character.isDigit(sol[i])) {
-	// coeficienteTemp = Character.getNumericValue(sol[i]);
-	// System.out.println("Seu coeficiente eh: " + coeficienteTemp);
-	// elemento.setCoeficiente(coeficienteTemp);
-	// }
-	// // o reagente
-	// equacaoQuimica.adicionarReagente(solucao);
-	// }
-	// }
-
-	public void montaEquacaoProduto(String text) {
-		String elementoTemp = "";
-		Integer coeficienteTemp = 0;
-		Solucao solucao = new Solucao();
-		char[] sol;
-		sol = text.toCharArray();
-		Elemento elemento = null;
-		for (int i = 0; i < sol.length; i++) {
-			if (Character.isLetter(sol[i])) {
-				if (Character.isUpperCase(sol[i])) {
-					elementoTemp = Character.toString(sol[i]);
-					if (i + 1 < sol.length) {
-						if (Character.isLowerCase(sol[i + 1])) {
-							elementoTemp = elementoTemp
-									+ Character.toString(sol[i + 1]);
-							i++;
-						}
-					}
-				}
-				EnumSiglaElemento[] enus = EnumSiglaElemento.values();
-				for (EnumSiglaElemento enu : enus) {
-					if (enu.name().toUpperCase().equals(elementoTemp)) {
-
-						elemento = new Elemento(enu.valueOf(elementoTemp));
-						System.out.println("Novo Elemento Encontrado: "
-								+ elemento.getSigla());
-						// a solucao
-						solucao.adicionarElemento(elemento);
-					}
-				}
-			} else if (Character.isDigit(sol[i])) {
-				coeficienteTemp = Character.getNumericValue(sol[i]);
-				System.out.println("Seu coeficiente eh: " + coeficienteTemp);
-				elemento.setCoeficiente(coeficienteTemp);
-			}
-			// o produto
-			equacaoQuimica.adicionarProduto(solucao);
 		}
 	}
 
