@@ -1,40 +1,51 @@
 package ufms.calculadora.extensoes.calculoEstequiometrico;
 
-import java.util.List;
-
-import ufms.calculadora.modelo.EquacaoQuimica;
+import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.Solucao;
 
+
 public class CalculoEstequiometrico {
+	
+	public static final Double numeroDeAvogrado = 6.02;
+	public static final Double volumeCNTP = 22.4;
 
-	private VariavelEstequiometrica variavel1;
-	private VariavelEstequiometrica variavel2;
-
-	public VariavelEstequiometrica calculaProporcao(EquacaoQuimica equacaoQuimica, Solucao solucaoChave, EnumMedidaGrandeza grandeza){
+	
+	public Double converteGrandeza(EnumGrandezaQuimica grandezaAtual, Double valor, EnumGrandezaQuimica grandezaDesejada, Solucao solucao){
 		
-		
-		VariavelEstequiometrica varivalSolucaoChave = FabricaVariavelEstequiometrica.criaVariavel(grandeza);
-		varivalSolucaoChave.setValor(new Double(solucaoChave.getIndice()));
-		
-		if(!grandeza.equals(variavel1.getGrandeza()) || !grandeza.equals(variavel2.getGrandeza())){
-			//execao grandezas diferentes.
+		//Mantém o valor em Mols
+		if(!grandezaAtual.equals(EnumGrandezaQuimica.MOL)){
+			
+			if(grandezaAtual.equals(EnumGrandezaQuimica.MASSA_MOLAR)){
+				Double massaMolarSolucao = this.encontraValorDaMassaMolar(solucao);
+				valor = valor / massaMolarSolucao;
+			}else if(grandezaAtual.equals(EnumGrandezaQuimica.VOLUME)){
+				valor = valor / volumeCNTP;
+			}else if(grandezaAtual.equals(EnumGrandezaQuimica.NUMERO_MOLECULAS)){
+				valor = valor / numeroDeAvogrado;
+			}
 		}
-
-		return null;
-	}
-
-	public void setSolucao1(List<Solucao> listaSolucao1,Integer posicaoSolucao1, EnumMedidaGrandeza grandeza)throws ArrayIndexOutOfBoundsException {
 		
-			Solucao solucao = listaSolucao1.get(posicaoSolucao1);
-			variavel1 = FabricaVariavelEstequiometrica.criaVariavel(grandeza);
-			variavel1.setValor(new Double(solucao.getIndice()));
+		if(grandezaDesejada.equals(EnumGrandezaQuimica.MASSA_MOLAR)){
+			Double massaMolarSolucao = this.encontraValorDaMassaMolar(solucao);
+			valor = valor * massaMolarSolucao;
+		}if(grandezaDesejada.equals(EnumGrandezaQuimica.VOLUME)){
+			valor = valor * volumeCNTP;
+		}else if(grandezaDesejada.equals(EnumGrandezaQuimica.NUMERO_MOLECULAS)){
+			valor = valor * numeroDeAvogrado;
+		}
+		
+		//Arredonda 5 casas decimais
+		return Math.round(valor*100000.0)/100000.0;
 	}
-
-	public void setSolucao2(List<Solucao> listaSolucao2, Integer posicaoSolucao2, EnumMedidaGrandeza grandeza) throws ArrayIndexOutOfBoundsException {
-
-			Solucao solucao = listaSolucao2.get(posicaoSolucao2);
-			variavel2 = FabricaVariavelEstequiometrica.criaVariavel(grandeza);
-			variavel2.setValor(new Double(solucao.getIndice()));
+	
+	
+	public Double encontraValorDaMassaMolar(Solucao solucao) {
+		Double valorResultado = 0.0;
+		
+		for (Elemento elemento : solucao.getElementos()) {
+			valorResultado += elemento.getCoeficiente() * elemento.getMassaAtomica();
+		}
+		return valorResultado;
 	}
 
 }

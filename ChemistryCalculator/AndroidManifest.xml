@@ -40,6 +40,10 @@
             android:name="com.example.chemistrycalculator.TabelaPeriodicaActivity"
             android:label="@string/title_activity_tabela_periodica" >
         </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.CalculoEstequiometricoActivity"
+            android:label="@string/title_activity_calculo_estequiometrico" >
+        </activity>
     </application>
 
 </manifest>

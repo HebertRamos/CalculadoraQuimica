@@ -9,5 +9,6 @@
     <string name="title_activity_adicionar_solucao">MainActivity</string>
     <string name="title_activity_tabela_periodica">TabelaPeriodica</string>
     <string name="title_activity_pick_number">PickNumber</string>
+    <string name="title_activity_calculo_estequiometrico">CalculoEstequiometricoActivity</string>
 
 </resources>

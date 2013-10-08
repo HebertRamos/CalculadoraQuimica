@@ -24,42 +24,37 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int CoeficienteElemento=0x7f080014;
-        public static final int CoeficienteSolucao=0x7f080000;
-        public static final int IndiceElemento=0x7f08001a;
-        public static final int IndiceSolucao1=0x7f080002;
-        public static final int action_settings=0x7f08001f;
-        public static final int btAddProduto=0x7f08000c;
-        public static final int btAddReagente=0x7f08000d;
-        public static final int btBalanceamento=0x7f080010;
-        public static final int btBalancear=0x7f080009;
-        public static final int btOk=0x7f080001;
-        public static final int elementoC=0x7f080017;
-        public static final int elementoCl=0x7f080016;
-        public static final int elementoCr=0x7f080012;
-        public static final int elementoCu=0x7f080019;
-        public static final int elementoFe=0x7f080007;
-        public static final int elementoH=0x7f080011;
-        public static final int elementoI=0x7f08001c;
-        public static final int elementoK=0x7f080013;
-        public static final int elementoMn=0x7f080018;
-        public static final int elementoN=0x7f08001b;
-        public static final int elementoNa=0x7f08001e;
-        public static final int elementoO=0x7f080015;
-        public static final int elementoS=0x7f08001d;
-        public static final int inputProdutos=0x7f08000e;
-        public static final int inputReagentes=0x7f08000b;
-        public static final int inputSolucao1=0x7f080005;
-        public static final int textView1=0x7f080004;
-        public static final int textView2=0x7f080006;
-        public static final int textViewUp=0x7f080003;
-        public static final int txtProduto=0x7f08000f;
-        public static final int txtReagente=0x7f08000a;
-        public static final int txtResultado=0x7f080008;
+        public static final int CoeficienteElemento=0x7f08000c;
+        public static final int IndiceElemento=0x7f080013;
+        public static final int action_settings=0x7f08001a;
+        public static final int btAddProduto=0x7f080004;
+        public static final int btAddReagente=0x7f080005;
+        public static final int btBalanceamento=0x7f080008;
+        public static final int btBalancear=0x7f080001;
+        public static final int elementoC=0x7f080010;
+        public static final int elementoCl=0x7f08000f;
+        public static final int elementoCr=0x7f08000a;
+        public static final int elementoCu=0x7f080012;
+        public static final int elementoFe=0x7f080015;
+        public static final int elementoH=0x7f080009;
+        public static final int elementoI=0x7f080017;
+        public static final int elementoK=0x7f08000b;
+        public static final int elementoMn=0x7f080011;
+        public static final int elementoN=0x7f080016;
+        public static final int elementoNa=0x7f080019;
+        public static final int elementoO=0x7f08000d;
+        public static final int elementoS=0x7f080018;
+        public static final int inputProdutos=0x7f080006;
+        public static final int inputReagentes=0x7f080003;
+        public static final int textView1=0x7f080014;
+        public static final int textView2=0x7f08000e;
+        public static final int txtProduto=0x7f080007;
+        public static final int txtReagente=0x7f080002;
+        public static final int txtResultado=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_adicionar_solucao=0x7f030000;
-        public static final int activity_balanceamento=0x7f030001;
+        public static final int activity_balanceamento=0x7f030000;
+        public static final int activity_calculo_estequiometrico=0x7f030001;
         public static final int activity_main=0x7f030002;
         public static final int activity_tabela_periodica=0x7f030003;
     }
@@ -67,8 +62,8 @@ public final class R {
         public static final int adicionar_produto=0x7f070000;
         public static final int adicionar_solucao=0x7f070001;
         public static final int balanceamento=0x7f070002;
-        public static final int main=0x7f070003;
-        public static final int pick_number=0x7f070004;
+        public static final int calculo_estequiometrico=0x7f070003;
+        public static final int main=0x7f070004;
         public static final int tabela_periodica=0x7f070005;
     }
     public static final class string {
@@ -78,6 +73,7 @@ public final class R {
         public static final int title_activity_adicionar_produto=0x7f050004;
         public static final int title_activity_adicionar_solucao=0x7f050005;
         public static final int title_activity_balanceamento=0x7f050003;
+        public static final int title_activity_calculo_estequiometrico=0x7f050008;
         public static final int title_activity_pick_number=0x7f050007;
         public static final int title_activity_tabela_periodica=0x7f050006;
     }

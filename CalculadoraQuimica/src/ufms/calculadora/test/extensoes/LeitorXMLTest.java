@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 
 import org.jdom.JDOMException;
 
-import ufms.calculadora.extensoes.leitorXML.LeitorXML;
+import ufms.calculadora.extensoes.leitorXML.TabelaPeriodica;
 import ufms.calculadora.modelo.Elemento;
 
 public class LeitorXMLTest extends TestCase {
@@ -16,7 +16,7 @@ public class LeitorXMLTest extends TestCase {
 	public void testLeitorXML() {
 	
 		List<Elemento> tabelaPeriodica = new ArrayList<Elemento>();
-		LeitorXML leitor = new LeitorXML();
+		TabelaPeriodica leitor = new TabelaPeriodica();
 		try {
 			tabelaPeriodica = leitor.carregarXML("elementos.xml");
 		} catch (JDOMException e) {
