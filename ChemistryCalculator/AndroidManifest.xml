@@ -44,6 +44,10 @@
             android:name="com.example.chemistrycalculator.CalculoEstequiometricoActivity"
             android:label="@string/title_activity_calculo_estequiometrico" >
         </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.TelaTeste"
+            android:label="@string/title_activity_tela_teste" >
+        </activity>
     </application>
 
 </manifest>

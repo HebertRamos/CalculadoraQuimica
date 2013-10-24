@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         	@Override
         	public void onClick(View arg0) {
         	 
-        	Intent trocatela = new Intent(MainActivity.this,BalanceamentoActivity.class);
+        	Intent trocatela = new Intent(MainActivity.this,TelaTeste.class);
         	MainActivity.this.startActivity(trocatela);
         	//MainActivity.this.finish();
         	 

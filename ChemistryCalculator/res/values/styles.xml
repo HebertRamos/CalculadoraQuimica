@@ -17,4 +17,8 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="styleName">
+        <item name="android:maxHeight">@dimen/activity_horizontal_margin</item>
+        <item name="android:maxWidth">@dimen/activity_horizontal_margin</item>
+    </style>
 </resources>
