@@ -42,9 +42,7 @@ public class TabelaPeriodicaActivity extends Activity {
 
 		for (Elemento elemento : elementos) {
 
-			Integer resourceId = getResources().getIdentifier(
-					"elemento" + elemento.getSigla().name(), "id",
-					this.getBaseContext().getPackageName());
+			Integer resourceId = getResources().getIdentifier( "elemento" + elemento.getSigla().name(), "id", this.getBaseContext().getPackageName());
 
 			if (resourceId != 0) {
 				Button botaoElemento = (Button) findViewById(resourceId);
@@ -59,26 +57,20 @@ public class TabelaPeriodicaActivity extends Activity {
 
 						Elemento elementoSelecionado = new Elemento();
 
-						String siglaString = ((Button) viewAtual).getText()
-								.toString();
-						elementoSelecionado.setSigla(EnumSiglaElemento
-								.valueOf(siglaString));
+						String siglaString = ((Button) viewAtual).getText().toString();
+						elementoSelecionado.setSigla(EnumSiglaElemento.valueOf(siglaString));
 
-						Integer indice = 1;
-						Integer coeficiente = 1;
 						if (!(inputIndice.getText().toString().equals(""))) {
-							indice = Integer.parseInt(inputIndice.getText()
-									.toString());
+							Integer indice = Integer.parseInt(inputIndice.getText().toString());
+							elementoSelecionado.setIndice(indice);
 						}
 						if (!(inputCoeficiente.getText().toString().equals(""))) {
-							coeficiente = Integer.parseInt(inputCoeficiente
-									.getText().toString());
+							Integer coeficiente = Integer.parseInt(inputCoeficiente.getText().toString());
+							elementoSelecionado.setCoeficiente(coeficiente);
 						}
-						elementoSelecionado.setIndice(indice);
-						elementoSelecionado.setCoeficiente(coeficiente);
-
-						data.putExtra("elementoSelecionado",
-								elementoSelecionado);
+						
+						
+						data.putExtra("elementoSelecionado", elementoSelecionado);
 						setResult(RESULT_OK, data);
 						finish();
 

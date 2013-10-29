@@ -1,17 +1,22 @@
 package com.example.chemistrycalculator;
 
-import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.Solucao;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
 public class AdicionarSolucaoActicity extends Activity {
+	
+	
+	public static Integer TIPO_SOLUCAO_ATUAL;
+	public final static Integer SOLUCAO_REAGENTE = 1;
+	public final static Integer SOLUCAO_PRODUTO = 2;
 
-	private Solucao solucaoAtual;
+	public static Solucao solucaoAtual;
+	
+	EditText inputsolucao;
 	EditText inputCoeficiente;
 	EditText inputIndice;
 
@@ -19,66 +24,59 @@ public class AdicionarSolucaoActicity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_adicionar_solucao);
-		solucaoAtual = new Solucao();
-		inputIndice = (EditText) findViewById(R.id.IndiceSolucao1);
-		inputCoeficiente = (EditText) findViewById(R.id.CoeficienteSolucao);
-	}
-
-	public void onClick(View view) {
-		finish();
-	}
-
-	@Override
-	public void finish() {
-		Intent data = new Intent();
-
-		Integer indice = 1;
-		Integer coeficiente = 1;
-		if (!(inputIndice.getText().toString().equals(""))) {
-			indice = Integer.parseInt(inputIndice.getText()
-					.toString());
-		}
-		if (!(inputCoeficiente.getText().toString().equals(""))) {
-			coeficiente = Integer.parseInt(inputCoeficiente
-					.getText().toString());
-		}
+		this.setTitle(carregaTitulo(TIPO_SOLUCAO_ATUAL));
 		
-		solucaoAtual.setIndice(indice);
-		solucaoAtual.setCoeficiente(coeficiente);
-
-		data.putExtra("solucaoAtual", solucaoAtual);
-		setResult(RESULT_OK, data);
-		super.finish();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.adicionar_produto, menu);
-		return true;
+		solucaoAtual = new Solucao();
+		
+		inputIndice = (EditText) findViewById(R.id.editTextIndiceSolucao);
+		inputCoeficiente = (EditText) findViewById(R.id.editTextCoeficienteSolucao);
+		inputsolucao = (EditText) findViewById(R.id.inputSolucao); 
 	}
 
 	public void adicionarElemento(View v) {
-		Intent trocatela = new Intent(this, TabelaPeriodicaActivity.class);
-		startActivityForResult(trocatela, 100);
+		Intent telaAdicionarElemento = new Intent(this, AdicionarElementoActivity.class);
+		startActivityForResult(telaAdicionarElemento, 0);
 	}
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if ((resultCode == RESULT_OK)) {
-			Elemento elementoSelecionado = (Elemento) data.getExtras()
-					.getSerializable("elementoSelecionado");
 
-			EditText inputText = (EditText) findViewById(R.id.inputSolucao1);
-			if (inputText.getText().length() != 0) {
-				// inputText.append(" + ");
+		inputsolucao.setText(solucaoAtual.toString());
+	}
+	
+	public void acionaBotaoOk(View view) {
+		
+		if(solucaoAtual != null){
+			if (!(inputIndice.getText().toString().equals(""))) {
+				Integer indice = Integer.parseInt(inputIndice.getText().toString());
+				solucaoAtual.setIndice(indice);
 			}
-			inputText.append(elementoSelecionado.getIndice().toString() + "(");
-			inputText.append(elementoSelecionado.getSigla().name());
-			inputText.append(")"
-					+ elementoSelecionado.getCoeficiente().toString());
+			if (!(inputCoeficiente.getText().toString().equals(""))) {
+				Integer coeficiente = Integer.parseInt(inputCoeficiente.getText().toString());
+				solucaoAtual.setCoeficiente(coeficiente);
+			}
 			
-			solucaoAtual.adicionarElemento(elementoSelecionado);
+			adicionarSolucaoNaEquacao(TIPO_SOLUCAO_ATUAL, solucaoAtual);
+		}
 
+		Intent data = new Intent();
+		setResult(RESULT_OK, data);
+		finish();
+	}
+	
+	private void adicionarSolucaoNaEquacao(Integer tipoSolucaoAtual,  Solucao solucaoAtual){
+		if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
+			BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarReagente(solucaoAtual);
+		}else{
+			BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarProduto(solucaoAtual);
+		}
+	}
+
+	
+	private String carregaTitulo(Integer tipoSolucaoAtual){
+		if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
+			return "Adicionar Reagente";
+		}else{
+			return "Adicionar Produto";
 		}
 	}
 

@@ -6,6 +6,7 @@
     <dimen name="Titulo">25dp</dimen>
     <dimen name="ImagemSeta">10dp</dimen>
     <dimen name="Botao">20dp</dimen>
+    <dimen name="tamanho_campo_indice_coeficiente">50dp</dimen>
     
 
 </resources>

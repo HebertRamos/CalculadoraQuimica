@@ -10,9 +10,10 @@
 
     <application
         android:allowBackup="true"
+        android:fontFamily="roboto"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/ChemistryCalculatorTheme" >
         <activity
             android:name="com.example.chemistrycalculator.MainActivity"
             android:label="@string/app_name" >
@@ -47,6 +48,10 @@
         <activity
             android:name="com.example.chemistrycalculator.TelaTeste"
             android:label="@string/title_activity_tela_teste" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.AdicionarElementoActivity"
+            android:label="@string/title_activity_adicionar_elemento" >
         </activity>
     </application>
 

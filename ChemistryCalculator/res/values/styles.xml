@@ -17,8 +17,20 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="styleName">
-        <item name="android:maxHeight">@dimen/activity_horizontal_margin</item>
-        <item name="android:maxWidth">@dimen/activity_horizontal_margin</item>
+    <style name="ChemistryCalculatorTheme" parent="android:Theme.Light">
+        <item name="android:windowTitleBackgroundStyle">@style/estiloPlanoDeFundoTitulo</item>
+        <item name="android:windowTitleSize">90dp</item>
+        <item name="android:titleTextStyle">@style/estiloTextoTitulo</item>
+    </style> 
+    
+    <style name="estiloPlanoDeFundoTitulo">     
+        <item name="android:background">@drawable/plano_de_fundo</item>
     </style>
+    
+    <style name="estiloTextoTitulo">     
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <color name="black">#000000</color>
+    
 </resources>

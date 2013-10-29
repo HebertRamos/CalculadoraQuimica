@@ -8,82 +8,83 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".BalanceamentoActivity" >
 
-    <TextView
-        android:id="@+id/txtResultado"
+    <EditText
+        android:id="@+id/inputProdutos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btBalancear"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:hint="Equação Balanceada"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="15sp" />
+        android:layout_alignBaseline="@+id/inputReagentes"
+        android:layout_alignBottom="@+id/inputReagentes"
+        android:layout_toRightOf="@+id/btBalancear"
+        android:ems="10"
+        android:enabled="false" 
+        >
 
-    <TextView
-        android:id="@+id/txtReagente"
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btBalancear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/inputReagentes"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text="Reagente" />
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/inputReagentes"
+        android:onClick="onClickBtBalancear"
+        android:text="Balancear"
+    />
+
+    <ImageButton
+        android:id="@+id/btAddProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/inputProdutos"
+        android:onClick="onClickAddProduto"
+        android:src="@drawable/botao" />
 
     <EditText
         android:id="@+id/inputReagentes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/btBalancear"
-        android:layout_below="@+id/txtReagente"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:enabled="false" />
 
-    <Button
-        android:id="@+id/btBalancear"
+    <TextView
+        android:id="@+id/txtReagente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="onClickBtBalancear"
-        android:text="Balancear" />
+        android:layout_above="@+id/inputReagentes"
+        android:layout_alignLeft="@+id/inputReagentes"
+        android:layout_marginLeft="21dp"
+        android:text="Reagentes" />
 
-    <Button
-        android:id="@+id/btAddProduto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btAddReagente"
-        android:layout_alignTop="@+id/inputProdutos"
-        android:onClick="onClickAddProduto"
-        android:text="Adiciona Produto" />
-
-    <Button
+    <ImageButton
         android:id="@+id/btAddReagente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/inputReagentes"
-        android:layout_toRightOf="@+id/inputReagentes"
+        android:layout_alignBottom="@+id/btBalancear"
+        android:layout_alignLeft="@+id/inputReagentes"
         android:onClick="onClickAddReagente"
-        android:text="Adiciona Reagente" />
+        android:src="@drawable/botao" />
 
     <TextView
         android:id="@+id/txtProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtReagente"
+        android:layout_alignBottom="@+id/txtReagente"
         android:layout_alignLeft="@+id/inputProdutos"
-        android:layout_below="@+id/btAddReagente"
-        android:layout_marginTop="26dp"
-        android:text="Produto" />
+        android:layout_marginLeft="23dp"
+        android:text="Produtos" />
 
-    <EditText
-        android:id="@+id/inputProdutos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtProduto"
-        android:layout_toLeftOf="@+id/btAddProduto"
-        android:ems="10"
-        android:enabled="false" >
-
-        <requestFocus />
-    </EditText>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:minHeight="10dp"
+        android:src="@drawable/seta_direita" />
 
 </RelativeLayout>

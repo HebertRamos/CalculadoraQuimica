@@ -30,13 +30,13 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/elementoO"
         android:layout_alignLeft="@+id/elementoH"
-        android:layout_alignRight="@+id/textView2"
+        android:layout_alignRight="@+id/textViewIndiceSolucao"
         android:layout_marginBottom="18dp"
         android:ems="10" />
     
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewIndiceSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/CoeficienteElemento"
@@ -75,17 +75,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/CoeficienteElemento"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_alignRight="@+id/textViewCoeficiente"
         android:layout_toRightOf="@+id/elementoO"
         android:ems="10" >    
         </EditText>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewCoeficiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/textViewIndiceSolucao"
+        android:layout_alignBottom="@+id/textViewIndiceSolucao"
         android:layout_toRightOf="@+id/elementoO"
         android:text="Índice" />
 

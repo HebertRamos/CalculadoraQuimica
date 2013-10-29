@@ -25,6 +25,8 @@ public class Solucao implements Serializable{
 			this.elementos = new ArrayList<Elemento>();
 		}
 		this.elementos.add(elemento);
+		
+		this.elementos.toString();
 	}
 
 	public Integer getIndice() {
@@ -84,5 +86,15 @@ public class Solucao implements Serializable{
 
 		return false;
 
+	}
+	
+	public String toString(){
+		String solucaoString = "";
+		if(elementos != null){
+			for (Elemento elemento : elementos) {
+				solucaoString += (elemento.getCoeficiente()== 1 ? " " : elemento.getCoeficiente())+elemento.getSigla().name()+elemento.getCoeficiente();
+			}
+		}
+		return solucaoString;
 	}
 }

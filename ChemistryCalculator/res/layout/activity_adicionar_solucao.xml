@@ -8,84 +8,79 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AdicionarSolucaoActicity" >
 
-    <EditText
-        android:id="@+id/CoeficienteSolucao"
+    <TextView
+        android:id="@+id/textViewIndiceSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btOk"
-        android:layout_alignParentTop="true"
-        android:ems="10" />
+        android:layout_above="@+id/editText1"
+        android:layout_alignLeft="@+id/editTextIndiceSolucao"
+        android:text="Índice" />
+
+    <ImageButton
+        android:id="@+id/btOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextCoeficienteSolucao"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:onClick="acionaBotaoOk"
+        android:src="@drawable/botao_ok" />
+
+    <TextView
+        android:id="@+id/textViewSolucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Solução" />
 
     <EditText
-        android:id="@+id/IndiceSolucao1"
+        android:id="@+id/inputSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/CoeficienteSolucao"
-        android:layout_below="@+id/CoeficienteSolucao"
-        android:duplicateParentState="false"
+        android:layout_below="@+id/textViewSolucao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
         android:ems="10"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:longClickable="false" >
+        android:enabled="false"
+        android:hint="ex: H" >
 
         <requestFocus />
     </EditText>
 
-    <TextView
-        android:id="@+id/textViewUp"
+    <EditText
+        android:id="@+id/editTextIndiceSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/IndiceSolucao1"
-        android:layout_marginTop="24dp"
-        android:text="Solução" />
+        android:layout_alignBaseline="@+id/inputSolucao"
+        android:layout_alignBottom="@+id/inputSolucao"
+        android:ems="10"
+        android:width="@dimen/tamanho_campo_indice_coeficiente" />
 
     <EditText
-        android:id="@+id/inputSolucao1"
+        android:id="@+id/editTextCoeficienteSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewUp"
-        android:layout_alignBottom="@+id/textViewUp"
-        android:layout_alignLeft="@+id/IndiceSolucao1"
+        android:layout_below="@+id/textViewCoeficiente"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/inputSolucao"
         android:ems="10"
-        android:enabled="false"
-        android:hint="ex: H" />
+        android:width="@dimen/tamanho_campo_indice_coeficiente" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewCoeficiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/CoeficienteSolucao"
-        android:layout_alignBottom="@+id/CoeficienteSolucao"
-        android:layout_toLeftOf="@+id/btOk"
+        android:layout_alignLeft="@+id/editTextCoeficienteSolucao"
+        android:layout_alignTop="@+id/inputSolucao"
         android:text="Coeficiente" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/IndiceSolucao1"
-        android:layout_alignBottom="@+id/IndiceSolucao1"
-        android:layout_alignRight="@+id/textView1"
-        android:text="Índice" />
-
-    <Button
+    <ImageButton
         android:id="@+id/elementoFe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/btOk"
+        android:layout_alignLeft="@+id/editTextIndiceSolucao"
         android:onClick="adicionarElemento"
-        android:text="Adicionar Elemento na Solução" />
-
-    <Button
-        android:id="@+id/btOk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/elementoFe"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:onClick="onClick"
-        android:text="Finalizar Solução" />
+        android:src="@drawable/botao" />
 
 </RelativeLayout>
