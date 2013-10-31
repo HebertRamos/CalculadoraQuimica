@@ -14,7 +14,7 @@ public final class R {
         public static final int black=0x7f070000;
     }
     public static final class dimen {
-        public static final int Botao=0x7f040004;
+        public static final int BotaoAdicionar=0x7f040004;
         public static final int ImagemSeta=0x7f040003;
         public static final int Titulo=0x7f040002;
         /**  Default screen margins, per the Android Design guidelines. 
@@ -25,7 +25,9 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f040000;
         public static final int activity_vertical_margin=0x7f040001;
+        public static final int alinhamento_esquerda_direita_rodape=0x7f040007;
         public static final int tamanho_campo_indice_coeficiente=0x7f040005;
+        public static final int tamanho_campo_solucao_medio=0x7f040006;
     }
     public static final class drawable {
         public static final int botao=0x7f020000;
@@ -43,10 +45,10 @@ public final class R {
         public static final int EditTextCoeficienteElemento=0x7f090005;
         public static final int IndiceElemento=0x7f090020;
         public static final int action_settings=0x7f090027;
-        public static final int btAddProduto=0x7f090011;
-        public static final int btAddReagente=0x7f090013;
+        public static final int btAddProduto=0x7f09000e;
+        public static final int btAddReagente=0x7f090012;
         public static final int btBalanceamento=0x7f090016;
-        public static final int btBalancear=0x7f090010;
+        public static final int btBalancear=0x7f090013;
         public static final int btOk=0x7f090009;
         public static final int editText1=0x7f090007;
         public static final int editTextCoeficienteSolucao=0x7f09000a;
@@ -70,15 +72,15 @@ public final class R {
         public static final int imageButton4=0x7f090026;
         public static final int imageButtonOkElemento=0x7f090002;
         public static final int imageView2=0x7f090015;
-        public static final int inputProdutos=0x7f09000e;
-        public static final int inputReagentes=0x7f09000f;
+        public static final int inputProdutos=0x7f09000f;
+        public static final int inputReagentes=0x7f090011;
         public static final int inputSolucao=0x7f09000c;
         public static final int textView3=0x7f090006;
         public static final int textViewCoeficiente=0x7f090003;
         public static final int textViewIndiceSolucao=0x7f090004;
         public static final int textViewSolucao=0x7f09000b;
         public static final int txtProduto=0x7f090014;
-        public static final int txtReagente=0x7f090012;
+        public static final int txtReagente=0x7f090010;
     }
     public static final class layout {
         public static final int activity_adicionar_elemento=0x7f030000;

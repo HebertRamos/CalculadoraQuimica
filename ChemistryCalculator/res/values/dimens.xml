@@ -5,8 +5,12 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="Titulo">25dp</dimen>
     <dimen name="ImagemSeta">10dp</dimen>
-    <dimen name="Botao">20dp</dimen>
+    <dimen name="BotaoAdicionar">90dp</dimen>
     <dimen name="tamanho_campo_indice_coeficiente">50dp</dimen>
+    <dimen name="tamanho_campo_solucao_medio">180dp</dimen>
+    <dimen name="alinhamento_esquerda_direita_rodape">0dp</dimen>
+    
+    
     
 
 </resources>

@@ -5,6 +5,7 @@ import ufms.calculadora.negocio.BalanceamentoController;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ public class BalanceamentoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_balanceamento);
+		this.setTitle("Cálculo de Balanceamento");
 
 		inputReagentes = (EditText) findViewById(R.id.inputReagentes);
 		inputProdutos = (EditText) findViewById(R.id.inputProdutos);
@@ -60,7 +62,7 @@ public class BalanceamentoActivity extends Activity {
 				reagentes += (solucao.getElementos().size() > 1 ? "(" : "") + solucao.toString() + (solucao.getElementos().size() > 1 ? ")" : "");
 			}
 		}
-		inputReagentes.setText(reagentes);
+		inputReagentes.setText(Html.fromHtml(reagentes));
 		
 		String produtos = "";
 		if(BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().getProdutos() != null) {
@@ -72,7 +74,7 @@ public class BalanceamentoActivity extends Activity {
 				produtos += (solucao.getElementos().size() > 1 ? "(" : "") + solucao.toString() + (solucao.getElementos().size() > 1 ? ")" : "");
 			}
 		}
-		inputProdutos.setText(produtos);
+		inputProdutos.setText(Html.fromHtml(produtos));
 	}
 	
 	public void onClickBtBalancear(View view) {

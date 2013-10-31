@@ -263,6 +263,8 @@ public class MetodoAlgebricoTest extends TestCase {
 		}
 
 		Assert.assertEquals(true, equacaoBalanceada.equals(equacaoEsperada));
+		
+		System.out.println(equacaoBalanceada);
 
 	}
 

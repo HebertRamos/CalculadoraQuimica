@@ -92,7 +92,7 @@ public class Solucao implements Serializable{
 		String solucaoString = "";
 		if(elementos != null){
 			for (Elemento elemento : elementos) {
-				solucaoString += (elemento.getCoeficiente()== 1 ? " " : elemento.getCoeficiente())+elemento.getSigla().name()+elemento.getCoeficiente();
+				solucaoString += (elemento.getIndice()== 1 ? " " : elemento.getIndice())+elemento.getSigla().name()+(elemento.getCoeficiente()== 1 ? " " : "<sub>"+elemento.getCoeficiente()+"</sub>");
 			}
 		}
 		return solucaoString;
