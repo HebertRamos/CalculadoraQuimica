@@ -1,13 +1,10 @@
 package ufms.calculadora.modelo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solucao implements Serializable{
-	
-	private static final long serialVersionUID = 6731304282414569524L;
-	
+public class Solucao {
+
 	private List<Elemento> elementos;
 	private Integer indice = 1;
 	private Integer coeficiente = 1;
@@ -25,8 +22,6 @@ public class Solucao implements Serializable{
 			this.elementos = new ArrayList<Elemento>();
 		}
 		this.elementos.add(elemento);
-		
-		this.elementos.toString();
 	}
 
 	public Integer getIndice() {

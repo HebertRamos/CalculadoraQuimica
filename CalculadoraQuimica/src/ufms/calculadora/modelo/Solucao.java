@@ -82,4 +82,14 @@ public class Solucao {
 		return false;
 
 	}
+	
+	public String toString(){
+		String solucaoString = "";
+		if(elementos != null){
+			for (Elemento elemento : elementos) {
+				solucaoString += (elemento.getIndice()== 1 ? " " : elemento.getIndice())+elemento.getSigla().name()+(elemento.getCoeficiente()== 1 ? " " : "<sub>"+elemento.getCoeficiente()+"</sub>");
+			}
+		}
+		return solucaoString;
+	}
 }

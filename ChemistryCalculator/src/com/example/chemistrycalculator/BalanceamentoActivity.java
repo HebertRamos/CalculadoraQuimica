@@ -80,7 +80,18 @@ public class BalanceamentoActivity extends Activity {
 	}
 	
 	public void onClickBtBalancear(View view) {
-		//TODO Vai para a tela de resultado.
+		
+		try{
+			balanceamentoController.balancearEquacao();
+			
+			Intent telaSolucaoBalanceamento = new Intent(this, SolucaoBalanceamentoActivity.class);
+			startActivityForResult(telaSolucaoBalanceamento,101);
+			
+		}catch(Exception e){
+			//Tela de Erro.
+		}
+		
+		
 	}
 
 

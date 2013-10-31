@@ -53,6 +53,10 @@
             android:name="com.example.chemistrycalculator.AdicionarElementoActivity"
             android:label="@string/title_activity_adicionar_elemento" >
         </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.SolucaoBalanceamentoActivity"
+            android:label="@string/title_activity_solucao_balanceamento" >
+        </activity>
     </application>
 
 </manifest>
