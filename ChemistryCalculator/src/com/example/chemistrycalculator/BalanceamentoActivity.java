@@ -59,7 +59,8 @@ public class BalanceamentoActivity extends Activity {
 				if(pos != 0){
 					reagentes += " + ";
 				}
-				reagentes += (solucao.getElementos().size() > 1 ? "(" : "") + solucao.toString() + (solucao.getElementos().size() > 1 ? ")" : "");
+				reagentes += (solucao.getIndice() != 1 || solucao.getCoeficiente() != 1  ? solucao.getIndice()+"(" : "") + solucao.toString() + (solucao.getIndice() != 1 || solucao.getCoeficiente() != 1 ? ")<sub>"+solucao.getCoeficiente()+"</sub>" : "");
+				pos++;
 			}
 		}
 		inputReagentes.setText(Html.fromHtml(reagentes));
@@ -71,7 +72,8 @@ public class BalanceamentoActivity extends Activity {
 				if(pos != 0){
 					produtos += " + ";
 				}
-				produtos += (solucao.getElementos().size() > 1 ? "(" : "") + solucao.toString() + (solucao.getElementos().size() > 1 ? ")" : "");
+				produtos += (solucao.getIndice() != 1 || solucao.getCoeficiente() != 1  ? solucao.getIndice()+"(" : "") + solucao.toString() + (solucao.getIndice() != 1 || solucao.getCoeficiente() != 1 ? ")<sub>"+solucao.getCoeficiente()+"</sub>" : "");
+				pos++;
 			}
 		}
 		inputProdutos.setText(Html.fromHtml(produtos));

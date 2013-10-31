@@ -2,85 +2,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AdicionarSolucaoActicity" >
 
-    <TextView
-        android:id="@+id/textViewIndiceSolucao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_alignLeft="@+id/editTextIndiceSolucao"
-        android:text="Índice" />
-
     <ImageButton
+        android:id="@+id/elementoFe"
+        android:layout_width="@dimen/BotaoAdicionar"
+        android:layout_height="@dimen/BotaoAdicionar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="adicionarElemento"
+        android:src="@drawable/botao" />
+
+    <Button
         android:id="@+id/btOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextCoeficienteSolucao"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="14dp"
+        android:layout_alignParentRight="true"
         android:onClick="acionaBotaoOk"
-        android:src="@drawable/botao_ok" />
-
-    <TextView
-        android:id="@+id/textViewSolucao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Solução" />
-
-    <EditText
-        android:id="@+id/inputSolucao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewSolucao"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:enabled="false"
-        android:hint="ex: H" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/editTextIndiceSolucao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/inputSolucao"
-        android:layout_alignBottom="@+id/inputSolucao"
-        android:ems="10"
-        android:width="@dimen/tamanho_campo_indice_coeficiente" />
-
-    <EditText
-        android:id="@+id/editTextCoeficienteSolucao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewCoeficiente"
-        android:layout_marginLeft="39dp"
-        android:layout_toRightOf="@+id/inputSolucao"
-        android:ems="10"
-        android:width="@dimen/tamanho_campo_indice_coeficiente" />
+        android:text="OK                 " />
 
     <TextView
         android:id="@+id/textViewCoeficiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextCoeficienteSolucao"
-        android:layout_alignTop="@+id/inputSolucao"
+        android:layout_alignBaseline="@+id/textViewSolucao"
+        android:layout_alignBottom="@+id/textViewSolucao"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
         android:text="Coeficiente" />
 
-    <ImageButton
-        android:id="@+id/elementoFe"
+    <TextView
+        android:id="@+id/textViewSolucao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btOk"
-        android:layout_alignLeft="@+id/editTextIndiceSolucao"
-        android:onClick="adicionarElemento"
-        android:src="@drawable/botao" />
+        android:layout_above="@+id/editTextSolucao_"
+        android:layout_alignLeft="@+id/editTextSolucao_"
+        android:text="Solução" />
+    <TextView android:id="@+id/textViewIndiceSolucao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/editTextIndiceSolucao" android:layout_alignParentRight="true" android:layout_marginRight="24dp" android:text="Índice"/>
+
+    <EditText
+        android:id="@+id/editTextSolucao_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewIndiceSolucao"
+        android:layout_marginRight="28dp"
+        android:layout_toLeftOf="@+id/editTextIndiceSolucao"
+        android:ems="10"
+        android:enabled="false"
+        android:width="@dimen/tamanho_campo_solucao_medio" />
+
+    <EditText
+        android:id="@+id/editTextCoeficienteSolucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextSolucao_"
+        android:layout_alignBottom="@+id/editTextSolucao_"
+        android:layout_alignRight="@+id/elementoFe"
+        android:ems="10"
+        android:width="@dimen/tamanho_campo_indice_coeficiente"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextIndiceSolucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btOk"
+        android:layout_alignRight="@+id/textViewIndiceSolucao"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:width="@dimen/tamanho_campo_indice_coeficiente" 
+        android:inputType="number"/>
 
 </RelativeLayout>
