@@ -30,13 +30,13 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/elementoO"
         android:layout_alignLeft="@+id/elementoH"
-        android:layout_alignRight="@+id/textViewIndiceSolucao"
+        android:layout_alignRight="@+id/textViewCoeficienteElemento"
         android:layout_marginBottom="18dp"
         android:ems="10" />
     
 
     <TextView
-        android:id="@+id/textViewIndiceSolucao"
+        android:id="@+id/textViewCoeficienteElemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/CoeficienteElemento"
@@ -84,8 +84,8 @@
         android:id="@+id/textViewCoeficiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewIndiceSolucao"
-        android:layout_alignBottom="@+id/textViewIndiceSolucao"
+        android:layout_alignBaseline="@+id/textViewCoeficienteElemento"
+        android:layout_alignBottom="@+id/textViewCoeficienteElemento"
         android:layout_toRightOf="@+id/elementoO"
         android:text="Índice" />
 

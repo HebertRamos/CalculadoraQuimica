@@ -43,13 +43,13 @@
         android:layout_above="@+id/editTextSolucao_"
         android:layout_alignLeft="@+id/editTextSolucao_"
         android:text="Solução" />
-    <TextView android:id="@+id/textViewIndiceSolucao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/editTextIndiceSolucao" android:layout_alignParentRight="true" android:layout_marginRight="24dp" android:text="Índice"/>
+    <TextView android:id="@+id/textViewCoeficienteElemento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/editTextIndiceSolucao" android:layout_alignParentRight="true" android:layout_marginRight="24dp" android:text="Índice"/>
 
     <EditText
         android:id="@+id/editTextSolucao_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textViewIndiceSolucao"
+        android:layout_alignTop="@+id/textViewCoeficienteElemento"
         android:layout_marginRight="28dp"
         android:layout_toLeftOf="@+id/editTextIndiceSolucao"
         android:ems="10"
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btOk"
-        android:layout_alignRight="@+id/textViewIndiceSolucao"
+        android:layout_alignRight="@+id/textViewCoeficienteElemento"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:width="@dimen/tamanho_campo_indice_coeficiente" 

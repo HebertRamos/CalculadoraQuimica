@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AdicionarElementoActivity" >
 
     <EditText
-        android:id="@+id/editTextIndiceElemento"
+        android:id="@+id/editTextCoeficienteElemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editTextElemento"
@@ -27,17 +27,18 @@
         android:layout_above="@+id/imageButtonOkElemento"
         android:layout_marginBottom="33dp"
         android:layout_marginLeft="32dp"
-        android:layout_toRightOf="@+id/editTextIndiceElemento"
+        android:layout_toRightOf="@+id/editTextCoeficienteElemento"
         android:ems="10"
-        android:maxWidth="@dimen/activity_horizontal_margin" />
+        android:maxWidth="@dimen/activity_horizontal_margin" 
+        android:width="@dimen/tamanho_campo_solucao_medio"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/imageButtonOkElemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/botao_ok" />
+        android:text="OK                 " />
 
     <TextView
         android:id="@+id/textViewCoeficiente"
@@ -49,34 +50,35 @@
         android:text="Elemento" />
 
     <TextView
-        android:id="@+id/textViewIndiceSolucao"
+        android:id="@+id/textViewCoeficienteElemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewCoeficiente"
         android:layout_alignBottom="@+id/textViewCoeficiente"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/textViewCoeficiente"
+        android:text="Coeficiente" />
+
+    <TextView
+        android:id="@+id/textViewIndiceElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editTextIndiceElemento"
+        android:layout_alignTop="@+id/editTextElemento"
         android:text="Índice" />
 
     <EditText
-        android:id="@+id/EditTextCoeficienteElemento"
+        android:id="@+id/editTextIndiceElemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="18dp"
-        android:layout_toLeftOf="@+id/imageButtonOkElemento"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewIndiceElemento"
+        android:layout_marginRight="25dp"
         android:ems="10"
         android:inputType="number"
         android:width="@dimen/tamanho_campo_indice_coeficiente" >
 
         <requestFocus />
     </EditText>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewCoeficiente"
-        android:layout_toLeftOf="@+id/imageButtonOkElemento"
-        android:text="Coeficiente" />
 
 </RelativeLayout>

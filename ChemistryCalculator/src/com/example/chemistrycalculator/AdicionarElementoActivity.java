@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 public class AdicionarElementoActivity extends Activity {
 
@@ -20,21 +20,21 @@ public class AdicionarElementoActivity extends Activity {
 	
 	Intent telaTabelaPeriodica;
 	
-	ImageButton botaoOk;
+	Button botaoOk;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_adicionar_elemento);
 		
-		inputIndice = (EditText) findViewById(R.id.editTextIndiceElemento);
-		inputCoeficiente = (EditText) findViewById(R.id.EditTextCoeficienteElemento);
+		inputIndice = (EditText) findViewById(R.id.editTextCoeficienteElemento);
+		inputCoeficiente = (EditText) findViewById(R.id.editTextIndiceElemento);
 		inputElemento = (EditText) findViewById(R.id.editTextElemento);
 		
 		telaTabelaPeriodica = new Intent(this, TabelaPeriodicaActivity.class);
 		startActivityForResult(telaTabelaPeriodica,1);
 		
-		botaoOk = (ImageButton) findViewById(R.id.imageButtonOkElemento);
+		botaoOk = (Button) findViewById(R.id.imageButtonOkElemento);
 		botaoOk.setOnClickListener(new View.OnClickListener() {
 
 			@Override
