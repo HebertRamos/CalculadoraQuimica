@@ -49,9 +49,8 @@ public class CalculoEstequiometricoTest extends TestCase {
 
 		Solucao solucao = this.getSolucaoAgua();
 
-		CalculoEstequiometrico calculoEstequiometrico = new CalculoEstequiometrico();
-
-		Double valorMassaMolar = calculoEstequiometrico
+		
+		Double valorMassaMolar = CalculoEstequiometrico
 				.encontraValorDaMassaMolar(solucao);
 
 		Double valorEsperado = 33.00674;
@@ -61,11 +60,10 @@ public class CalculoEstequiometricoTest extends TestCase {
 
 	public void testConverterMolEmMassaMolarAgua() {
 
-		CalculoEstequiometrico calculoEstequiometrico = new CalculoEstequiometrico();
-
+		
 		Solucao agua = this.getSolucaoAgua();
 
-		Double valorMassaMolar = calculoEstequiometrico.converteGrandeza(
+		Double valorMassaMolar = CalculoEstequiometrico.converteGrandeza(
 				EnumGrandezaQuimica.MOL, (double) 2,
 				EnumGrandezaQuimica.MASSA_MOLAR, agua);
 
@@ -76,11 +74,9 @@ public class CalculoEstequiometricoTest extends TestCase {
 
 	public void testConverterMassaMolarEmMolAgua() {
 
-		CalculoEstequiometrico calculoEstequiometrico = new CalculoEstequiometrico();
-
 		Solucao agua = this.getSolucaoAgua();
 
-		Double valorMol = calculoEstequiometrico.converteGrandeza(
+		Double valorMol = CalculoEstequiometrico.converteGrandeza(
 				EnumGrandezaQuimica.MASSA_MOLAR, (double) 66.01348,
 				EnumGrandezaQuimica.MOL, agua);
 
@@ -91,9 +87,8 @@ public class CalculoEstequiometricoTest extends TestCase {
 	
 	public void testConverterVolumeEmMol() {
 
-		CalculoEstequiometrico calculoEstequiometrico = new CalculoEstequiometrico();
-
-		Double valorMol = calculoEstequiometrico.converteGrandeza(EnumGrandezaQuimica.VOLUME, (double) 156.8 ,EnumGrandezaQuimica.MOL, null);
+		
+		Double valorMol = CalculoEstequiometrico.converteGrandeza(EnumGrandezaQuimica.VOLUME, (double) 156.8 ,EnumGrandezaQuimica.MOL, null);
 
 		Double molEsperado = 7.0;
 

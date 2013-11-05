@@ -1,5 +1,6 @@
 package com.example.chemistrycalculator;
 
+import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.Solucao;
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +13,10 @@ import android.widget.TextView;
 public class AdicionarSolucaoActicity extends Activity {
 	
 	
-	public static Integer TIPO_SOLUCAO_ATUAL;
-	public final static Integer SOLUCAO_REAGENTE = 1;
-	public final static Integer SOLUCAO_PRODUTO = 2;
-
-	public static Solucao solucaoAtual;
+	public static String TITULO_SINGULAR;
+	public static String TITULO_PLURAL;
+	
+	private Solucao solucaoAtual;
 	
 	EditText inputsolucao;
 	EditText inputCoeficiente;
@@ -28,7 +28,7 @@ public class AdicionarSolucaoActicity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_adicionar_solucao);
-		this.setTitle(carregaTitulo(TIPO_SOLUCAO_ATUAL));
+		this.setTitle("Adicionar "+TITULO_PLURAL);
 		
 		solucaoAtual = new Solucao();
 		
@@ -37,7 +37,7 @@ public class AdicionarSolucaoActicity extends Activity {
 		inputsolucao = (EditText) findViewById(R.id.editTextSolucao_);
 		
 		tituloCampoSolucao = (TextView) findViewById(R.id.textViewSolucao);
-		tituloCampoSolucao.setText(carregaTituloCampoSolucao(TIPO_SOLUCAO_ATUAL));
+		tituloCampoSolucao.setText(TITULO_SINGULAR);
 	}
 
 	public void adicionarElemento(View v) {
@@ -47,7 +47,11 @@ public class AdicionarSolucaoActicity extends Activity {
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-		inputsolucao.setText(Html.fromHtml(solucaoAtual.toString()));
+		if(resultCode == RESULT_OK){
+			Elemento elementoAtual = (Elemento) data.getExtras().getSerializable("elementoAtual");
+			solucaoAtual.adicionarElemento(elementoAtual);
+			inputsolucao.setText(Html.fromHtml(solucaoAtual.toString()));
+		}
 	}
 	
 	public void acionaBotaoOk(View view) {
@@ -62,37 +66,13 @@ public class AdicionarSolucaoActicity extends Activity {
 				solucaoAtual.setCoeficiente(indice);
 			}
 			
-			adicionarSolucaoNaEquacao(TIPO_SOLUCAO_ATUAL, solucaoAtual);
 		}
 
 		Intent data = new Intent();
+		data.putExtra("solucaoAtual", solucaoAtual);
 		setResult(RESULT_OK, data);
 		finish();
 	}
 	
-	private void adicionarSolucaoNaEquacao(Integer tipoSolucaoAtual,  Solucao solucaoAtual){
-		if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
-			BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarReagente(solucaoAtual);
-		}else{
-			BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarProduto(solucaoAtual);
-		}
-	}
 	
-	private String carregaTituloCampoSolucao(Integer tipoSolucaoAtual){
-		if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
-			return "Reagentes";
-		}else{
-			return "Produtos";
-		}
-	}
-
-	
-	private String carregaTitulo(Integer tipoSolucaoAtual){
-		if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
-			return "Adicionar Reagente";
-		}else{
-			return "Adicionar Produto";
-		}
-	}
-
 }

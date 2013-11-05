@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 
 	Button btBalanceamento;
+	Button btCalculoEstequiometrico;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,19 @@ public class MainActivity extends Activity {
         	public void onClick(View arg0) {
         	 
 	        	Intent trocatela = new Intent(MainActivity.this,BalanceamentoActivity.class);
+	        	MainActivity.this.startActivity(trocatela);
+	        	//MainActivity.this.finish();
+	        	 
+        	}
+        });
+        
+        btCalculoEstequiometrico = (Button) findViewById(R.id.btnCalculoEstequiometrico);
+        btCalculoEstequiometrico.setOnClickListener(new View.OnClickListener() {
+        	 
+        	@Override
+        	public void onClick(View arg0) {
+        	 
+	        	Intent trocatela = new Intent(MainActivity.this,CalculoEstequiometricoActivity.class);
 	        	MainActivity.this.startActivity(trocatela);
 	        	//MainActivity.this.finish();
 	        	 

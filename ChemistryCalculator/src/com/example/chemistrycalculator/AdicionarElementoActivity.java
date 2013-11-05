@@ -9,6 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * 
+ * @author Agenlo Maggioni
+ * @author Hebert Ramos 
+ * 
+ *  Classe responsável por gerenciar o layout activity_adicionar_elemento.xml.
+ *  
+ */
 public class AdicionarElementoActivity extends Activity {
 
 	
@@ -23,6 +31,9 @@ public class AdicionarElementoActivity extends Activity {
 	Button botaoOk;
 	
 	@Override
+	/**
+	 * Invoca a tela Tabela Periodica.
+	 */
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_adicionar_elemento);
@@ -49,12 +60,12 @@ public class AdicionarElementoActivity extends Activity {
 						Integer coeficiente = Integer.parseInt(inputCoeficiente.getText().toString());
 						elementoAtual.setCoeficiente(coeficiente);
 					}
-
-					AdicionarSolucaoActicity.solucaoAtual.adicionarElemento(elementoAtual);
+					
 				}
 
 				finishActivity(1);
 				Intent data = new Intent();
+				data.putExtra("elementoAtual", elementoAtual);
 				setResult(RESULT_OK, data);
 				finish();
 			}
@@ -64,11 +75,13 @@ public class AdicionarElementoActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.adicionar_elemento, menu);
 		return true;
 	}
 	
+	/**
+	 * Capura o retorno da tela Tabela Periodica e seta o atribuito elementoAtual
+	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if ((resultCode == RESULT_OK)) {
 			Elemento elementoSelecionado = (Elemento) data.getExtras().getSerializable("elementoSelecionado");

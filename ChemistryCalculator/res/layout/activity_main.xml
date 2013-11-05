@@ -17,4 +17,13 @@
         android:layout_marginTop="27dp"
         android:text="Cálculo de Balanceamento" />
 
+    <Button
+        android:id="@+id/btnCalculoEstequiometrico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btBalanceamento"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Cálculo Estequiométrico" />
+
 </RelativeLayout>

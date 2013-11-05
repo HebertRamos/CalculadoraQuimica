@@ -8,6 +8,7 @@
     <dimen name="BotaoAdicionar">90dp</dimen>
     <dimen name="tamanho_campo_indice_coeficiente">60dp</dimen>
     <dimen name="tamanho_campo_solucao_medio">180dp</dimen>
+    <dimen name="tamanho_campo_solucao_grande">250dp</dimen>
     <dimen name="alinhamento_esquerda_direita_rodape">0dp</dimen>
     
     

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elementos>
+   <elemento>
+      <nome>Hidrogênio</nome>
+      <numeroAtomico>1</numeroAtomico>
+      <simbolo>H</simbolo>
+      <massaAtomica medida="g/mol">1.00794</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Hélio</nome>
+      <numeroAtomico>2</numeroAtomico>
+      <simbolo>He</simbolo>
+      <massaAtomica medida="g/mol">4.002602</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Lítio</nome>
+      <numeroAtomico>3</numeroAtomico>
+      <simbolo>Li</simbolo>
+      <massaAtomica medida="g/mol">6.941</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Berílio</nome>
+      <numeroAtomico>4</numeroAtomico>
+      <simbolo>Be</simbolo>
+      <massaAtomica medida="g/mol">9.012182</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Boro</nome>
+      <numeroAtomico>5</numeroAtomico>
+      <simbolo>B</simbolo>
+      <massaAtomica medida="g/mol">10.811</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Carbono</nome>
+      <numeroAtomico>6</numeroAtomico>
+      <simbolo>C</simbolo>
+      <massaAtomica medida="g/mol">12.011</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Nitrogênio</nome>
+      <numeroAtomico>7</numeroAtomico>
+      <simbolo>N</simbolo>
+      <massaAtomica medida="g/mol">14.00674</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Oxigênio</nome>
+      <numeroAtomico>8</numeroAtomico>
+      <simbolo>O</simbolo>
+      <massaAtomica medida="g/mol">15.9994</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Flúor</nome>
+      <numeroAtomico>9</numeroAtomico>
+      <simbolo>F</simbolo>
+      <massaAtomica medida="g/mol">18.9984032</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Néon</nome>
+      <numeroAtomico>10</numeroAtomico>
+      <simbolo>Ne</simbolo>
+      <massaAtomica medida="g/mol">20.1797</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Sódio</nome>
+      <numeroAtomico>11</numeroAtomico>
+      <simbolo>Na</simbolo>
+      <massaAtomica medida="g/mol">22.989768</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Magnésio</nome>
+      <numeroAtomico>12</numeroAtomico>
+      <simbolo>Mg</simbolo>
+      <massaAtomica medida="g/mol">24.305</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Alumínio</nome>
+      <numeroAtomico>13</numeroAtomico>
+      <simbolo>Al</simbolo>
+      <massaAtomica medida="g/mol">26.981539</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Silício</nome>
+      <numeroAtomico>14</numeroAtomico>
+      <simbolo>Si</simbolo>
+      <massaAtomica medida="g/mol">28.0855</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Fósforo</nome>
+      <numeroAtomico>15</numeroAtomico>
+      <simbolo>P</simbolo>
+      <massaAtomica medida="g/mol">30.973762</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Enxofre</nome>
+      <numeroAtomico>16</numeroAtomico>
+      <simbolo>S</simbolo>
+      <massaAtomica medida="g/mol">32.066</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cloro</nome>
+      <numeroAtomico>17</numeroAtomico>
+      <simbolo>Cl</simbolo>
+      <massaAtomica medida="g/mol">35.4527</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Árgon</nome>
+      <numeroAtomico>18</numeroAtomico>
+      <simbolo>Ar</simbolo>
+      <massaAtomica medida="g/mol">39.948</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Potássio</nome>
+      <numeroAtomico>19</numeroAtomico>
+      <simbolo>K</simbolo>
+      <massaAtomica medida="g/mol">39.0983</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cálcio</nome>
+      <numeroAtomico>20</numeroAtomico>
+      <simbolo>Ca</simbolo>
+      <massaAtomica medida="g/mol">40.078</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Escândio</nome>
+      <numeroAtomico>21</numeroAtomico>
+      <simbolo>Sc</simbolo>
+      <massaAtomica medida="g/mol">44.95591</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Titânio</nome>
+      <numeroAtomico>22</numeroAtomico>
+      <simbolo>Ti</simbolo>
+      <massaAtomica medida="g/mol">47.88</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Vanádio</nome>
+      <numeroAtomico>23</numeroAtomico>
+      <simbolo>V</simbolo>
+      <massaAtomica medida="g/mol">50.9415</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cromo</nome>
+      <numeroAtomico>24</numeroAtomico>
+      <simbolo>Cr</simbolo>
+      <massaAtomica medida="g/mol">51.9961</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Manganês</nome>
+      <numeroAtomico>25</numeroAtomico>
+      <simbolo>Mn</simbolo>
+      <massaAtomica medida="g/mol">54.93805</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ferro</nome>
+      <numeroAtomico>26</numeroAtomico>
+      <simbolo>Fe</simbolo>
+      <massaAtomica medida="g/mol">55.847</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cobalto</nome>
+      <numeroAtomico>27</numeroAtomico>
+      <simbolo>Co</simbolo>
+      <massaAtomica medida="g/mol">58.9332</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Níquel</nome>
+      <numeroAtomico>28</numeroAtomico>
+      <simbolo>Ni</simbolo>
+      <massaAtomica medida="g/mol">58.69</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cobre</nome>
+      <numeroAtomico>29</numeroAtomico>
+      <simbolo>Cu</simbolo>
+      <massaAtomica medida="g/mol">63.546</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Zinco</nome>
+      <numeroAtomico>30</numeroAtomico>
+      <simbolo>Zn</simbolo>
+      <massaAtomica medida="g/mol">65.39</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Gálio</nome>
+      <numeroAtomico>31</numeroAtomico>
+      <simbolo>Ga</simbolo>
+      <massaAtomica medida="g/mol">69.723</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Germânio</nome>
+      <numeroAtomico>32</numeroAtomico>
+      <simbolo>Ge</simbolo>
+      <massaAtomica medida="g/mol">72.61</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Arsênio</nome>
+      <numeroAtomico>33</numeroAtomico>
+      <simbolo>As</simbolo>
+      <massaAtomica medida="g/mol">74.92159</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Selênio</nome>
+      <numeroAtomico>34</numeroAtomico>
+      <simbolo>Se</simbolo>
+      <massaAtomica medida="g/mol">78.96</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Bromo</nome>
+      <numeroAtomico>35</numeroAtomico>
+      <simbolo>Br</simbolo>
+      <massaAtomica medida="g/mol">79.904</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Crípton</nome>
+      <numeroAtomico>36</numeroAtomico>
+      <simbolo>Kr</simbolo>
+      <massaAtomica medida="g/mol">83.8</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rubídio</nome>
+      <numeroAtomico>37</numeroAtomico>
+      <simbolo>Rb</simbolo>
+      <massaAtomica medida="g/mol">85.4678</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Estrôncio</nome>
+      <numeroAtomico>38</numeroAtomico>
+      <simbolo>Sr</simbolo>
+      <massaAtomica medida="g/mol">87.62</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ítrio</nome>
+      <numeroAtomico>39</numeroAtomico>
+      <simbolo>Y</simbolo>
+      <massaAtomica medida="g/mol">88.90585</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Zircônio</nome>
+      <numeroAtomico>40</numeroAtomico>
+      <simbolo>Zr</simbolo>
+      <massaAtomica medida="g/mol">91.224</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Nióbio</nome>
+      <numeroAtomico>41</numeroAtomico>
+      <simbolo>Nb</simbolo>
+      <massaAtomica medida="g/mol">92.90638</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Molibdénio</nome>
+      <numeroAtomico>42</numeroAtomico>
+      <simbolo>Mo</simbolo>
+      <massaAtomica medida="g/mol">95.94</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Tecnécio</nome>
+      <numeroAtomico>43</numeroAtomico>
+      <simbolo>Tc</simbolo>
+      <massaAtomica medida="g/mol">98.9063</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rutênio</nome>
+      <numeroAtomico>44</numeroAtomico>
+      <simbolo>Ru</simbolo>
+      <massaAtomica medida="g/mol">101.07</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ródio</nome>
+      <numeroAtomico>45</numeroAtomico>
+      <simbolo>Rh</simbolo>
+      <massaAtomica medida="g/mol">102.9055</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Paládio</nome>
+      <numeroAtomico>46</numeroAtomico>
+      <simbolo>Pd</simbolo>
+      <massaAtomica medida="g/mol">106.42</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Prata</nome>
+      <numeroAtomico>47</numeroAtomico>
+      <simbolo>Ag</simbolo>
+      <massaAtomica medida="g/mol">107.8682</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cádmio</nome>
+      <numeroAtomico>48</numeroAtomico>
+      <simbolo>Cd</simbolo>
+      <massaAtomica medida="g/mol">112.411</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Índio</nome>
+      <numeroAtomico>49</numeroAtomico>
+      <simbolo>In</simbolo>
+      <massaAtomica medida="g/mol">114.82</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Estanho</nome>
+      <numeroAtomico>50</numeroAtomico>
+      <simbolo>Sn</simbolo>
+      <massaAtomica medida="g/mol">118.71</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Antimónio</nome>
+      <numeroAtomico>51</numeroAtomico>
+      <simbolo>Sb</simbolo>
+      <massaAtomica medida="g/mol">121.75</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Telúrio</nome>
+      <numeroAtomico>52</numeroAtomico>
+      <simbolo>Te</simbolo>
+      <massaAtomica medida="g/mol">127.6</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Iodo</nome>
+      <numeroAtomico>53</numeroAtomico>
+      <simbolo>I</simbolo>
+      <massaAtomica medida="g/mol">128.90447</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Xénon</nome>
+      <numeroAtomico>54</numeroAtomico>
+      <simbolo>Xe</simbolo>
+      <massaAtomica medida="g/mol">131.29</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Césio</nome>
+      <numeroAtomico>55</numeroAtomico>
+      <simbolo>Cs</simbolo>
+      <massaAtomica medida="g/mol">132.90543</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Bário</nome>
+      <numeroAtomico>56</numeroAtomico>
+      <simbolo>Ba</simbolo>
+      <massaAtomica medida="g/mol">137.327</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Lantânio</nome>
+      <numeroAtomico>57</numeroAtomico>
+      <simbolo>La</simbolo>
+      <massaAtomica medida="g/mol">138.9055</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cério</nome>
+      <numeroAtomico>58</numeroAtomico>
+      <simbolo>Ce</simbolo>
+      <massaAtomica medida="g/mol">140.115</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Praseodímio</nome>
+      <numeroAtomico>59</numeroAtomico>
+      <simbolo>Pr</simbolo>
+      <massaAtomica medida="g/mol">140.90765</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Neodímio</nome>
+      <numeroAtomico>60</numeroAtomico>
+      <simbolo>Nd</simbolo>
+      <massaAtomica medida="g/mol">144.24</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Promécio</nome>
+      <numeroAtomico>61</numeroAtomico>
+      <simbolo>Pm</simbolo>
+      <massaAtomica medida="g/mol">146.9151</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Samário</nome>
+      <numeroAtomico>62</numeroAtomico>
+      <simbolo>Sm</simbolo>
+      <massaAtomica medida="g/mol">150.36</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Európio</nome>
+      <numeroAtomico>63</numeroAtomico>
+      <simbolo>Eu</simbolo>
+      <massaAtomica medida="g/mol">151.965</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Gadolínio</nome>
+      <numeroAtomico>64</numeroAtomico>
+      <simbolo>Gd</simbolo>
+      <massaAtomica medida="g/mol">157.25</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Térbio</nome>
+      <numeroAtomico>65</numeroAtomico>
+      <simbolo>Tb</simbolo>
+      <massaAtomica medida="g/mol">158.92534</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Disprósio</nome>
+      <numeroAtomico>66</numeroAtomico>
+      <simbolo>Dy</simbolo>
+      <massaAtomica medida="g/mol">162.5</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Hólmio</nome>
+      <numeroAtomico>67</numeroAtomico>
+      <simbolo>Ho</simbolo>
+      <massaAtomica medida="g/mol">164.93032</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Érbio</nome>
+      <numeroAtomico>68</numeroAtomico>
+      <simbolo>Er</simbolo>
+      <massaAtomica medida="g/mol">167.26</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Túlio</nome>
+      <numeroAtomico>69</numeroAtomico>
+      <simbolo>Tm</simbolo>
+      <massaAtomica medida="g/mol">168.93421</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Itérbio</nome>
+      <numeroAtomico>70</numeroAtomico>
+      <simbolo>Yb</simbolo>
+      <massaAtomica medida="g/mol">173.04</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Lutécio</nome>
+      <numeroAtomico>71</numeroAtomico>
+      <simbolo>Lu</simbolo>
+      <massaAtomica medida="g/mol">174.967</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Háfnio</nome>
+      <numeroAtomico>72</numeroAtomico>
+      <simbolo>Hf</simbolo>
+      <massaAtomica medida="g/mol">178.49</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Tântalo</nome>
+      <numeroAtomico>73</numeroAtomico>
+      <simbolo>Ta</simbolo>
+      <massaAtomica medida="g/mol">180.9479</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Tungsténio</nome>
+      <numeroAtomico>74</numeroAtomico>
+      <simbolo>W</simbolo>
+      <massaAtomica medida="g/mol">183.85</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rénio</nome>
+      <numeroAtomico>75</numeroAtomico>
+      <simbolo>Re</simbolo>
+      <massaAtomica medida="g/mol">186.207</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ósmio</nome>
+      <numeroAtomico>76</numeroAtomico>
+      <simbolo>Os</simbolo>
+      <massaAtomica medida="g/mol">190.2</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Irídio</nome>
+      <numeroAtomico>77</numeroAtomico>
+      <simbolo>Ir</simbolo>
+      <massaAtomica medida="g/mol">192.22</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Platina</nome>
+      <numeroAtomico>78</numeroAtomico>
+      <simbolo>Pt</simbolo>
+      <massaAtomica medida="g/mol">195.08</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ouro</nome>
+      <numeroAtomico>79</numeroAtomico>
+      <simbolo>Au</simbolo>
+      <massaAtomica medida="g/mol">196.96654</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Mercúrio</nome>
+      <numeroAtomico>80</numeroAtomico>
+      <simbolo>Hg</simbolo>
+      <massaAtomica medida="g/mol">200.59</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Tálio</nome>
+      <numeroAtomico>81</numeroAtomico>
+      <simbolo>Tl</simbolo>
+      <massaAtomica medida="g/mol">204.3833</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Chumbo</nome>
+      <numeroAtomico>82</numeroAtomico>
+      <simbolo>Pb</simbolo>
+      <massaAtomica medida="g/mol">207.2</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Bismuto</nome>
+      <numeroAtomico>83</numeroAtomico>
+      <simbolo>Bi</simbolo>
+      <massaAtomica medida="g/mol">208.98037</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Polónio</nome>
+      <numeroAtomico>84</numeroAtomico>
+      <simbolo>Po</simbolo>
+      <massaAtomica medida="g/mol">208.9824</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ástato</nome>
+      <numeroAtomico>85</numeroAtomico>
+      <simbolo>At</simbolo>
+      <massaAtomica medida="g/mol">209.9871</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rádon</nome>
+      <numeroAtomico>86</numeroAtomico>
+      <simbolo>Rn</simbolo>
+      <massaAtomica medida="g/mol">222.0176</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Frâncio</nome>
+      <numeroAtomico>87</numeroAtomico>
+      <simbolo>Fr</simbolo>
+      <massaAtomica medida="g/mol">223.0197</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rádio</nome>
+      <numeroAtomico>88</numeroAtomico>
+      <simbolo>Ra</simbolo>
+      <massaAtomica medida="g/mol">226.0254</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Actínio</nome>
+      <numeroAtomico>89</numeroAtomico>
+      <simbolo>Ac</simbolo>
+      <massaAtomica medida="g/mol">227.0278</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Tório</nome>
+      <numeroAtomico>90</numeroAtomico>
+      <simbolo>Th</simbolo>
+      <massaAtomica medida="g/mol">232.0381</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Protactínio</nome>
+      <numeroAtomico>91</numeroAtomico>
+      <simbolo>Pa</simbolo>
+      <massaAtomica medida="g/mol">231.0359</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Urânio</nome>
+      <numeroAtomico>92</numeroAtomico>
+      <simbolo>U</simbolo>
+      <massaAtomica medida="g/mol">238.0289</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Neptúnio</nome>
+      <numeroAtomico>93</numeroAtomico>
+      <simbolo>Np</simbolo>
+      <massaAtomica medida="g/mol">237.0482</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Plutônio</nome>
+      <numeroAtomico>94</numeroAtomico>
+      <simbolo>Pu</simbolo>
+      <massaAtomica medida="g/mol">244.0642</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Amerício</nome>
+      <numeroAtomico>95</numeroAtomico>
+      <simbolo>Am</simbolo>
+      <massaAtomica medida="g/mol">243.0614</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Cúrio</nome>
+      <numeroAtomico>96</numeroAtomico>
+      <simbolo>Cm</simbolo>
+      <massaAtomica medida="g/mol">247.0703</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Berkélio</nome>
+      <numeroAtomico>97</numeroAtomico>
+      <simbolo>Bk</simbolo>
+      <massaAtomica medida="g/mol">247.0703</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Califórnio</nome>
+      <numeroAtomico>98</numeroAtomico>
+      <simbolo>Cf</simbolo>
+      <massaAtomica medida="g/mol">251.0796</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Einstênio</nome>
+      <numeroAtomico>99</numeroAtomico>
+      <simbolo>Es</simbolo>
+      <massaAtomica medida="g/mol">252.0829</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Férmio</nome>
+      <numeroAtomico>100</numeroAtomico>
+      <simbolo>Fm</simbolo>
+      <massaAtomica medida="g/mol">257.0951</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Mendelévio</nome>
+      <numeroAtomico>101</numeroAtomico>
+      <simbolo>Md</simbolo>
+      <massaAtomica medida="g/mol">258.0986</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Nobélio</nome>
+      <numeroAtomico>102</numeroAtomico>
+      <simbolo>No</simbolo>
+      <massaAtomica medida="g/mol">259.1009</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Laurêncio</nome>
+      <numeroAtomico>103</numeroAtomico>
+      <simbolo>Lr</simbolo>
+      <massaAtomica medida="g/mol">260.1053</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Rutherfórdio</nome>
+      <numeroAtomico>104</numeroAtomico>
+      <simbolo>Rf</simbolo>
+      <massaAtomica medida="g/mol">261.1087</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Dúbnio</nome>
+      <numeroAtomico>105</numeroAtomico>
+      <simbolo>Db</simbolo>
+      <massaAtomica medida="g/mol">262.1138</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Seabórgio</nome>
+      <numeroAtomico>106</numeroAtomico>
+      <simbolo>Sg</simbolo>
+      <massaAtomica medida="g/mol">263.1182</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Bório</nome>
+      <numeroAtomico>107</numeroAtomico>
+      <simbolo>Bh</simbolo>
+      <massaAtomica medida="g/mol">262.1229</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Hássio</nome>
+      <numeroAtomico>108</numeroAtomico>
+      <simbolo>Hs</simbolo>
+      <massaAtomica medida="g/mol">265</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Meitnério</nome>
+      <numeroAtomico>109</numeroAtomico>
+      <simbolo>Mt</simbolo>
+      <massaAtomica medida="g/mol">266</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Darmstácio</nome>
+      <numeroAtomico>110</numeroAtomico>
+      <simbolo>Ds</simbolo>
+      <massaAtomica medida="g/mol">269</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Roentgênio</nome>
+      <numeroAtomico>111</numeroAtomico>
+      <simbolo>Rg</simbolo>
+      <massaAtomica medida="g/mol">272</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Copernício</nome>
+      <numeroAtomico>112</numeroAtomico>
+      <simbolo>Cn</simbolo>
+      <massaAtomica medida="g/mol">277</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Unúntrio</nome>
+      <numeroAtomico>113</numeroAtomico>
+      <simbolo>Uut</simbolo>
+      <massaAtomica />
+   </elemento>
+   <elemento>
+      <nome>Fleróvio</nome>
+      <numeroAtomico>114</numeroAtomico>
+      <simbolo>Fl</simbolo>
+      <massaAtomica medida="g/mol">289</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ununpêntio</nome>
+      <numeroAtomico>115</numeroAtomico>
+      <simbolo>Uup</simbolo>
+      <massaAtomica />
+   </elemento>
+   <elemento>
+      <nome>Livermório</nome>
+      <numeroAtomico>116</numeroAtomico>
+      <simbolo>Lv</simbolo>
+      <massaAtomica medida="g/mol">292</massaAtomica>
+   </elemento>
+   <elemento>
+      <nome>Ununséptio</nome>
+      <numeroAtomico>117</numeroAtomico>
+      <simbolo>Uus</simbolo>
+      <massaAtomica />
+   </elemento>
+   <elemento>
+      <nome>Ununóctio</nome>
+      <numeroAtomico>118</numeroAtomico>
+      <simbolo>Uuo</simbolo>
+      <massaAtomica />
+   </elemento>
+</elementos>

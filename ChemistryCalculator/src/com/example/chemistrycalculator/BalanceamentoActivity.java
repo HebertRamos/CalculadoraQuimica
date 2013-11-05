@@ -14,11 +14,17 @@ public class BalanceamentoActivity extends Activity {
 	
 	public static BalanceamentoController balanceamentoController;
 	
+	
+	private static int SOLUCAO_REAGENTE = 1;
+	private static int SOLUCAO_PRODUTO = 2;
+	
 	EditText inputReagentes;
 	EditText inputProdutos;
 	Button btBalancear;
 	Button btAdicionarReagente;
 	Button brAdicionarProduto;
+	
+	private int tipoSolucaoAtual;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +41,10 @@ public class BalanceamentoActivity extends Activity {
 
 	public void onClickAddReagente(View view) {
 
-		AdicionarSolucaoActicity.TIPO_SOLUCAO_ATUAL = AdicionarSolucaoActicity.SOLUCAO_REAGENTE;
+		tipoSolucaoAtual = SOLUCAO_REAGENTE;
+		AdicionarSolucaoActicity.TITULO_PLURAL ="Reagentes";
+		AdicionarSolucaoActicity.TITULO_SINGULAR ="Reagente";
+		
 		Intent telaAdicionarSolucao = new Intent(this, AdicionarSolucaoActicity.class);
 		startActivityForResult(telaAdicionarSolucao,100);
 		
@@ -45,12 +54,30 @@ public class BalanceamentoActivity extends Activity {
 
 	public void onClickAddProduto(View view) {
 
-		AdicionarSolucaoActicity.TIPO_SOLUCAO_ATUAL = AdicionarSolucaoActicity.SOLUCAO_PRODUTO;
+		tipoSolucaoAtual = SOLUCAO_PRODUTO;
+		AdicionarSolucaoActicity.TITULO_PLURAL ="Produtos";
+		AdicionarSolucaoActicity.TITULO_SINGULAR ="Produto";
+				
 		Intent telaAdicionarSolucao = new Intent(this, AdicionarSolucaoActicity.class);
 		startActivityForResult(telaAdicionarSolucao,100);
 	}
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		
+		if(resultCode == RESULT_OK){
+			Solucao solucaoAtual = (Solucao) data.getExtras().getSerializable("solucaoAtual");
+			if(tipoSolucaoAtual == SOLUCAO_REAGENTE){
+				BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarReagente(solucaoAtual);
+			}else if(tipoSolucaoAtual == SOLUCAO_PRODUTO){
+				BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().adicionarProduto(solucaoAtual);
+			}
+			
+			mostraEquacao();
+		}
+		
+	}
+	
+	public void mostraEquacao(){
 		
 		String reagentes = "";
 		if(BalanceamentoActivity.balanceamentoController.getEquacaoQuimica().getReagentes() != null) {

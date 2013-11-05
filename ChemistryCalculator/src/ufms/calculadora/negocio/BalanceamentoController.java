@@ -5,7 +5,7 @@ import ufms.calculadora.extensoes.calculoBalanceamento.CalculoBalanceamento;
 import ufms.calculadora.extensoes.calculoBalanceamento.MetodoAlgebrico;
 import ufms.calculadora.modelo.EquacaoQuimica;
 
-public class BalanceamentoController {
+public class BalanceamentoController implements Controller{
 	
 	private EquacaoQuimica equacaoQuimica;
 	
