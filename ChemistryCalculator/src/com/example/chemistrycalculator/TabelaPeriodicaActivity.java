@@ -10,22 +10,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class TabelaPeriodicaActivity extends Activity {
 
 	Elemento elementoSelecionado;
-	EditText inputCoeficiente;
-	EditText inputIndice;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTitle("Tabela Periódica");
 		setContentView(R.layout.activity_tabela_periodica);
 		carregaTabelaPeriodica();
-		inputIndice = (EditText) findViewById(R.id.IndiceElemento);
-		inputCoeficiente = (EditText) findViewById(R.id.CoeficienteElemento);
 	}
 
 	@Override
@@ -39,43 +35,41 @@ public class TabelaPeriodicaActivity extends Activity {
 	public void carregaTabelaPeriodica() {
 
 		List<Elemento> elementos = TabelaPeriodica.getElementos();
+		
+		if(elementos == null) {
+			return;
+		}
 
 		for (Elemento elemento : elementos) {
 
 			Integer resourceId = getResources().getIdentifier( "elemento" + elemento.getSigla().name(), "id", this.getBaseContext().getPackageName());
 
 			if (resourceId != 0) {
-				Button botaoElemento = (Button) findViewById(resourceId);
+				
+				TextView botaoElemento = (TextView) findViewById(resourceId);
+				
+				if(botaoElemento != null) {
 
-				botaoElemento.setText(elemento.getSigla().name());
-				botaoElemento.setOnClickListener(new View.OnClickListener() {
-
-					@Override
-					public void onClick(View viewAtual) {
-
-						Intent data = new Intent();
-
-						Elemento elementoSelecionado = new Elemento();
-
-						String siglaString = ((Button) viewAtual).getText().toString();
-						elementoSelecionado.setSigla(EnumSiglaElemento.valueOf(siglaString));
-
-						if (!(inputIndice.getText().toString().equals(""))) {
-							Integer indice = Integer.parseInt(inputIndice.getText().toString());
-							elementoSelecionado.setIndice(indice);
+					botaoElemento.setText(elemento.getSigla().name());
+					botaoElemento.setOnClickListener(new View.OnClickListener() {
+	
+						@Override
+						public void onClick(View viewAtual) {
+	
+							Intent data = new Intent();
+	
+							Elemento elementoSelecionado = new Elemento();
+	
+							String siglaString = ((TextView) viewAtual).getText().toString();
+							elementoSelecionado.setSigla(EnumSiglaElemento.valueOf(siglaString));
+	
+							data.putExtra("elementoSelecionado", elementoSelecionado);
+							setResult(RESULT_OK, data);
+							finish();
+	
 						}
-						if (!(inputCoeficiente.getText().toString().equals(""))) {
-							Integer coeficiente = Integer.parseInt(inputCoeficiente.getText().toString());
-							elementoSelecionado.setCoeficiente(coeficiente);
-						}
-						
-						
-						data.putExtra("elementoSelecionado", elementoSelecionado);
-						setResult(RESULT_OK, data);
-						finish();
-
-					}
-				});
+					});
+				}
 
 			}
 		}

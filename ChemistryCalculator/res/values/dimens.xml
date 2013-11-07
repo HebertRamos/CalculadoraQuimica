@@ -11,6 +11,10 @@
     <dimen name="tamanho_campo_solucao_grande">250dp</dimen>
     <dimen name="alinhamento_esquerda_direita_rodape">0dp</dimen>
     
+    <dimen name="tamanho_altura_largura_elemento">30dp</dimen>
+    <dimen name="tamanho_margem_linha_elemento">1dp</dimen>
+    <dimen name="tamanho_altura_linha_elemento">540dp</dimen>
+    
     
     
 
