@@ -42,7 +42,7 @@ public class TabelaPeriodica {
 		Iterator i = elementos.iterator();
 
 		List<Elemento> tabelaPeriodica = new ArrayList<Elemento>();
-
+		
 		while (i.hasNext()) {
 			Element noElemento = (Element) i.next();
 
@@ -50,12 +50,13 @@ public class TabelaPeriodica {
 			try {
 				elemento.setNumeroAtomico(Integer.valueOf(noElemento.getChildText("numeroAtomico")));
 				elemento.setSigla(EnumSiglaElemento.valueOf(noElemento.getChildText("simbolo")));
-				elemento.setNome(noElemento.getChildText("simbolo"));
+				elemento.setNome(noElemento.getChildText("nome"));
 				if(noElemento.getChildText("massaAtomica").equals("")){
 					elemento.setMassaAtomica(new Double(0));
 				}else{
 					elemento.setMassaAtomica(Double.valueOf(noElemento.getChildText("massaAtomica")));
 				}
+				
 				
 			} catch (IllegalArgumentException e) {
 				noElemento.toString();

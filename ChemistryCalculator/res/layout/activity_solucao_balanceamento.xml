@@ -9,15 +9,6 @@
     tools:context=".SolucaoBalanceamentoActivity" >
 
     <TextView
-        android:id="@+id/textViewReagentesSolucaoBalanceamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="75dp"
-        android:text="@string/hello_world" />
-
-    <TextView
         android:id="@+id/TextViewProdutosSolucaoBalanceamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,13 +28,13 @@
         android:minHeight="10dp"
         android:src="@drawable/seta_direita" />
 
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/textViewReagentesSolucaoBalanceamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="acionaBotaoOk"
-        android:text="OK                 "  />
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginRight="62dp"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:text="@string/hello_world" />
 
 </RelativeLayout>

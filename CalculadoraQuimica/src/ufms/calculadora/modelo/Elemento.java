@@ -6,6 +6,7 @@ public class Elemento {
 	private String nome;
 	private Double massaAtomica;
 	private EnumSiglaElemento sigla;
+	
 	private Integer indice = 1;
 	private Integer coeficiente = 1;
 

@@ -90,7 +90,9 @@ public class AdicionarElementoActivity extends Activity {
 			elementoAtual.setCoeficiente(elementoSelecionado.getCoeficiente());
 			elementoAtual.setIndice(elementoSelecionado.getIndice());
 			elementoAtual.setSigla(elementoSelecionado.getSigla());
-			
+			elementoAtual.setMassaAtomica(elementoSelecionado.getMassaAtomica());
+			elementoAtual.setNome(elementoSelecionado.getNome());
+			elementoAtual.setNumeroAtomico(elementoSelecionado.getNumeroAtomico());			
 			
 			inputElemento.setText(elementoAtual.getSigla().name());
 		}

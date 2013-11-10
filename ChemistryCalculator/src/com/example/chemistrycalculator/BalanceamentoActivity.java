@@ -32,7 +32,7 @@ public class BalanceamentoActivity extends Activity {
 		setContentView(R.layout.activity_balanceamento);
 		this.setTitle("Cálculo de Balanceamento");
 
-		inputReagentes = (EditText) findViewById(R.id.inputReagentes);
+		inputReagentes = (EditText) findViewById(R.id.inputSubstancia);
 		inputProdutos = (EditText) findViewById(R.id.inputProdutos);
 		btBalancear = (Button) findViewById(R.id.btBalancear);
 		

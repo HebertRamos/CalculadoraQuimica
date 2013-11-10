@@ -36,7 +36,7 @@ public class CalculoEstequiometricoTest extends TestCase {
 
 		}
 
-		oxigenio.setCoeficiente(2);
+		hidrogenio.setCoeficiente(2);
 
 		Solucao solucao = new Solucao();
 		solucao.adicionarElemento(hidrogenio);
@@ -53,7 +53,7 @@ public class CalculoEstequiometricoTest extends TestCase {
 		Double valorMassaMolar = CalculoEstequiometrico
 				.encontraValorDaMassaMolar(solucao);
 
-		Double valorEsperado = 33.00674;
+		Double valorEsperado = 18.01528;
 
 		Assert.assertEquals(valorEsperado, valorMassaMolar);
 	}
@@ -67,7 +67,7 @@ public class CalculoEstequiometricoTest extends TestCase {
 				EnumGrandezaQuimica.MOL, (double) 2,
 				EnumGrandezaQuimica.MASSA_MOLAR, agua);
 
-		Double massaEsperada = 66.01348;
+		Double massaEsperada = 36.03056;
 
 		Assert.assertEquals(massaEsperada, valorMassaMolar);
 	}

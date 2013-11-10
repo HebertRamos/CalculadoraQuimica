@@ -21,8 +21,8 @@
         android:id="@+id/txtReagente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/inputReagentes"
-        android:layout_alignLeft="@+id/inputReagentes"
+        android:layout_above="@+id/inputSubstancia"
+        android:layout_alignLeft="@+id/inputSubstancia"
         android:layout_marginLeft="21dp"
         android:text="Reagentes" />
 
@@ -31,7 +31,7 @@
         android:layout_width="@dimen/BotaoAdicionar"
         android:layout_height="@dimen/BotaoAdicionar"
         android:layout_alignBottom="@+id/btBalancear"
-        android:layout_alignLeft="@+id/inputReagentes"
+        android:layout_alignLeft="@+id/inputSubstancia"
         android:onClick="onClickAddReagente"
         android:src="@drawable/botao" />
 
@@ -57,7 +57,7 @@
         android:width="@dimen/tamanho_campo_solucao_medio" />
 
     <EditText
-        android:id="@+id/inputReagentes"
+        android:id="@+id/inputSubstancia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView2"

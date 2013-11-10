@@ -46,16 +46,16 @@
             android:label="@string/title_activity_calculo_estequiometrico" >
         </activity>
         <activity
-            android:name="com.example.chemistrycalculator.TelaTeste"
-            android:label="@string/title_activity_tela_teste" >
-        </activity>
-        <activity
             android:name="com.example.chemistrycalculator.AdicionarElementoActivity"
             android:label="@string/title_activity_adicionar_elemento" >
         </activity>
         <activity
             android:name="com.example.chemistrycalculator.SolucaoBalanceamentoActivity"
             android:label="@string/title_activity_solucao_balanceamento" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.SolucaoCalculoEstequiometricoActivity"
+            android:label="@string/title_activity_solucao_calculo_estequiometrico" >
         </activity>
     </application>
 

@@ -13,11 +13,11 @@
         android:layout_width="@dimen/BotaoAdicionar"
         android:layout_height="@dimen/BotaoAdicionar"
         android:layout_alignParentBottom="true"
-        android:onClick="onClickAddProduto"
+        android:onClick="onClickAddSolucao"
         android:src="@drawable/botao" />
 
     <EditText
-        android:id="@+id/inputReagentes"
+        android:id="@+id/inputSubstancia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -32,8 +32,8 @@
         android:id="@+id/txtReagente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/inputReagentes"
-        android:layout_alignLeft="@+id/inputReagentes"
+        android:layout_above="@+id/inputSubstancia"
+        android:layout_alignLeft="@+id/inputSubstancia"
         android:text="Substância " />
 
     <Button

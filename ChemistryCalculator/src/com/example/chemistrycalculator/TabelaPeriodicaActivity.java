@@ -2,9 +2,9 @@ package com.example.chemistrycalculator;
 
 import java.util.List;
 
+import ufms.calculadora.extensoes.recursos.TabelaPeriodica;
 import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.EnumSiglaElemento;
-import ufms.calculadora.negocio.TabelaPeriodica;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,10 +58,8 @@ public class TabelaPeriodicaActivity extends Activity {
 	
 							Intent data = new Intent();
 	
-							Elemento elementoSelecionado = new Elemento();
-	
 							String siglaString = ((TextView) viewAtual).getText().toString();
-							elementoSelecionado.setSigla(EnumSiglaElemento.valueOf(siglaString));
+							Elemento elementoSelecionado = TabelaPeriodica.getElemento(EnumSiglaElemento.valueOf(siglaString));
 	
 							data.putExtra("elementoSelecionado", elementoSelecionado);
 							setResult(RESULT_OK, data);
