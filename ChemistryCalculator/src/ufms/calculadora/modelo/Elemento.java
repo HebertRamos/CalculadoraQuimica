@@ -2,6 +2,12 @@ package ufms.calculadora.modelo;
 
 import java.io.Serializable;
 
+/**
+ * Classe que modela o Elemento Químico
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public class Elemento implements Serializable{
 	
 	

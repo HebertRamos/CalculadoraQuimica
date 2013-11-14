@@ -8,20 +8,21 @@ import java.util.TreeSet;
 
 /**
  * Classe que realiza de calculos em cima de uma Expressão Algébrica.
- * @author hramos
+ * 
+ * @author Hebert Ramos
  */
 public class CalculadoraAlgebrica {
 
 	/**
-	 * Isola uma variável de uma expressão algébrica. Passos: 1 - Caso as
-	 * ocorrencias da variavel estejam somente do lado direito da expressão os
-	 * lados são invertido, para manter as ocorrencias do lado esquerdo. 2 -
-	 * Mantem do lado esquerdo somente as ocorrencias de variável. 3 - Caso haja
-	 * várias ocorrencias da variável é realizada as opearções para que reste
-	 * apenas uma. 4 - Executa as operações do lado direito afim de sobrar
-	 * apenas um número. 5 - Se sobrou um operador do em uma posição a esquerda
-	 * da variavel o mesmo é retirado. 6 - Passa divindo o valor companheiro da
-	 * variavel.
+	 * Isola uma variável de uma expressão algébrica. 
+	 * Passos: <BR/>
+	 * 1 - Caso as ocorrencias da variavel estejam somente do lado direito da expressão os lados são invertidos, para manter as ocorrencias do lado esquerdo.<BR/>
+	 * 2 - Mantem do lado esquerdo somente as ocorrencias de variável. <BR/>
+	 * 3 - Caso haja várias ocorrencias da variável é realizada as opearções para que reste apenas uma.<BR/> 
+	 * 4 - Executa as operações do lado direito afim de sobrar apenas um número. <BR/>
+	 * 5 - Se sobrou um operador do em uma posição a esquerda da variavel o mesmo é retirado.<BR/> 
+	 * 6 - Passa divindo o valor companheiro da variavel.<BR/>
+	 * 
 	 * @param expressaoAlgebrica Expressão Algébrica.
 	 * @param identificadorVariavel Indentificador da Variável.
 	 * @return Expressão algébrica com a variável já isolada.
@@ -54,6 +55,17 @@ public class CalculadoraAlgebrica {
 		return expressaoAlgebrica;
 	}
 
+	/**
+	 * Isola uma variável de um dado duas expressões Algébricas Ex:
+	 * 
+	 *  A + B = 2 
+	 *  B + A + 2 = 4 
+	 *   
+	 * @param expressaoAlgebrica1
+	 * @param expressaoAlgebrica2
+	 * @param identificadorVariavel
+	 * @return ExpressaoAlgebrica
+	 */
 	public ExpressaoAlgebrica isolaVariavel(ExpressaoAlgebrica expressaoAlgebrica1, ExpressaoAlgebrica expressaoAlgebrica2, String identificadorVariavel) {
 
 		Variavel var = new Variavel(identificadorVariavel);
@@ -78,7 +90,13 @@ public class CalculadoraAlgebrica {
 
 		return expressaoAlgebrica2;
 	}
-
+	
+	/**
+	 * Mantém a ocorrência de uma variável do lado esquerdo de uma expressão algébrica.
+	 * @param expressaoAlgebrica
+	 * @param identificadorVariavel
+	 * @return ExpressaoAlgebrica
+	 */
 	public ExpressaoAlgebrica mantemOcorrenciasVariavelDoLadoEsquerdo(ExpressaoAlgebrica expressaoAlgebrica, String identificadorVariavel) {
 
 		if (expressaoAlgebrica.ladoContemVariavel(expressaoAlgebrica.getLadoDireito(), identificadorVariavel) && !expressaoAlgebrica.ladoContemVariavel(expressaoAlgebrica.getLadoEsquerdo(), identificadorVariavel)) {
@@ -110,6 +128,11 @@ public class CalculadoraAlgebrica {
 		return expressaoAlgebrica;
 	}
 
+	/**
+	 * Inverte os lados de uma expresão algébrica para facilitar os cálculos.
+	 * @param expressaoAlgebrica
+	 * 
+	 */
 	private void inverteLado(ExpressaoAlgebrica expressaoAlgebrica) {
 
 		List<String> temp = expressaoAlgebrica.getLadoEsquerdo();
@@ -149,6 +172,14 @@ public class CalculadoraAlgebrica {
 
 	}
 
+	/**
+	 * Verifica se uma expressão pode ser convertida em somente uma variavel verifcando se existe somente uma variavel no lado esquerdo. Ex: 
+	 * 
+	 * A = 5; Pode ser convertida em um objeto Varivel.
+	 * 
+	 * @param expressaoAlgebrica
+	 * @return boolean
+	 */
 	public boolean expressaoPodeSerParseadaParaVariavelEsquerda(ExpressaoAlgebrica expressaoAlgebrica) {
 
 		String valorAntigoLadoDireito = expressaoAlgebrica.getLadoDireito().get(1);
@@ -175,6 +206,14 @@ public class CalculadoraAlgebrica {
 		}
 	}
 
+	/**
+	 * Verifica se uma expressão pode ser convertida em somente uma variavel verifcando se existe somente uma variavel no lado direito. Ex: 
+	 * 
+	 * 5 = A; Pode ser convertida em um objeto Varivel.
+	 * 
+	 * @param expressaoAlgebrica
+	 * @return boolean
+	 */
 	public boolean expressaoPodeSerParseadaParaVariavelDireita(ExpressaoAlgebrica expressaoAlgebrica) {
 
 		String valorAntigoLadoDireito = expressaoAlgebrica.getLadoDireito().get(1);
@@ -214,6 +253,11 @@ public class CalculadoraAlgebrica {
 
 	}
 
+	/**
+	 * Executa operações em um lado recusivamente em duplas
+	 * @param lado
+	 * @return  List<String>
+	 */
 	public List<String> executaOperacoesLadoRecursivo(List<String> lado) {
 		if (lado.size() >= 4) {
 
@@ -340,6 +384,17 @@ public class CalculadoraAlgebrica {
 		return resultadoOperacao;
 	}
 
+	/**
+	 * Troca um algarismo de lado trocando o seu operador se necessário Ex:
+	 * 
+	 * A - 5 = 4;   =>   A = 4 + 5;
+	 *  
+	 * 
+	 * @param operador
+	 * @param algarismo
+	 * @param ladoOrigem
+	 * @param ladoDestino
+	 */
 	public void trocaAlgarismoDeLado(String operador, String algarismo, List<String> ladoOrigem, List<String> ladoDestino) {
 
 		String operadorInverso = EnumOperacaoesCalculadoraAlgebrica.getSimboloInversoOperacao(operador);
@@ -357,6 +412,17 @@ public class CalculadoraAlgebrica {
 		ladoDestino.add(algarismo);
 	}
 
+	/**
+	 * Aplica uma condição Variavel a uma Expressão Algébrica. Ex:
+	 * 
+	 * A + B = 4; onde a condição é A = 3  => 3 + B = 4;
+	 * 
+	 * 
+	 * @param expressaoAlgebrica
+	 * @param variavelCondicao
+	 * @param sinal
+	 * @return
+	 */
 	public ExpressaoAlgebrica aplicaCondicao(ExpressaoAlgebrica expressaoAlgebrica, Variavel variavelCondicao, String sinal) {
 
 		if (variavelCondicao != null) {
@@ -368,6 +434,16 @@ public class CalculadoraAlgebrica {
 		return expressaoAlgebrica;
 	}
 
+	/**
+	 * Aplica uma condição recursivamente por pares a um expressão algébrica, onde essa condição é uma Expressão Algébrica. Ex:
+	 * 
+	 * A + B = 5; onde a condição é A = B + C => B + C + B = 5;
+	 * 
+	 * @param expressaoAlgebrica
+	 * @param variavelCondicao
+	 * @param expressaoAlgebricaCondicao
+	 * @return
+	 */
 	public ExpressaoAlgebrica aplicaCondicao(ExpressaoAlgebrica expressaoAlgebrica, Variavel variavelCondicao, ExpressaoAlgebrica expressaoAlgebricaCondicao) {
 
 		if (variavelCondicao != null && expressaoAlgebricaCondicao.getLadoEsquerdo().size() == 2 && expressaoAlgebricaCondicao.getLadoEsquerdo().get(1).equals("1" + variavelCondicao.getId())) {
@@ -384,6 +460,16 @@ public class CalculadoraAlgebrica {
 		return expressaoAlgebrica;
 	}
 
+	/**
+	 * Aplica uma condição recursivamente por pares a um lado, onde essa condição é uma Expressão Algébrica. Ex: 
+	 * 
+	 * A + B; onde a condição é A = B + C => B + C + B
+	 *  
+	 * @param lado
+	 * @param condicaoVariavel
+	 * @param expressaoAlgebricaCondicao
+	 * @return
+	 */
 	private List<String> aplicaCondicao(List<String> lado, Variavel condicaoVariavel, ExpressaoAlgebrica expressaoAlgebricaCondicao) {
 
 		int posicao = 0;
@@ -442,6 +528,13 @@ public class CalculadoraAlgebrica {
 		return novoLado;
 	}
 
+	/**
+	 * Aplica uma condição dado um lado e uma variável e o seu sinal de operação. Ex:
+	 * A + B; onde A = 3 => 3 + B 
+	 * @param lado
+	 * @param condicaoVariavel
+	 * @param sinal
+	 */
 	private void aplicaCondicao(List<String> lado, Variavel condicaoVariavel, String sinal) {
 		int posicao = 0;
 		for (String algarismo : lado) {
@@ -461,6 +554,14 @@ public class CalculadoraAlgebrica {
 		}
 	}
 
+	/**
+	 * Mantém as ocorrencias de uma variável agrupadas dentro do lado.Ex:
+	 * 
+	 * 2A + 5 + 3A = 4 => 2A + 3A + 5 = 4;
+	 *  
+	 * @param lado
+	 * @return
+	 */
 	public List<String> agrupaVariaveisLado(List<String> lado) {
 
 		HashMap<String, List<String>> mapaLado = new HashMap<String, List<String>>();

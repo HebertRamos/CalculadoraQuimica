@@ -9,6 +9,12 @@ import ufms.calculadora.modelo.EnumSiglaElemento;
 import ufms.calculadora.modelo.EquacaoQuimica;
 import ufms.calculadora.modelo.Solucao;
 
+/**
+ * Classe pai que modela os métodos necessários para realizar o cálculo de balanceamento.
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class CalculoBalanceamento {
 
 	public boolean estaBalanceada(EquacaoQuimica equacaoQuimica) {

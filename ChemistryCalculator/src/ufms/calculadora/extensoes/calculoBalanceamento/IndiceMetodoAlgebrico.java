@@ -6,6 +6,11 @@ import java.util.List;
 import ufms.calculadora.extensoes.calculadoraAlgebrica.Variavel;
 import ufms.calculadora.modelo.Solucao;
 
+/**
+ * Classe que modelo o índice dos elementos da Equação Química
+ * @author Hebert Ramos
+ *
+ */
 public class IndiceMetodoAlgebrico {
 
 	private static List<String> listaIndentificadoresVariaveis;

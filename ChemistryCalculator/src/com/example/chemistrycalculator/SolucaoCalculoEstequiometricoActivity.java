@@ -10,6 +10,12 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Classe que controlua a solução do calculo estequiométrico.
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class SolucaoCalculoEstequiometricoActivity extends Activity {
 
 	public static Solucao solucao;

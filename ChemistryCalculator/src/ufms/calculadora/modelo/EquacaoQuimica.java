@@ -2,7 +2,12 @@ package ufms.calculadora.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Classe que modela um Equação Química
+ * 
+ * @author Hebert Ramos
+ * 
+ */
 public class EquacaoQuimica {
 
 	private List<Solucao> reagentes;

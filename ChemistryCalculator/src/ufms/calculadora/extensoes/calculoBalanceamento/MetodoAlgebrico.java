@@ -11,14 +11,25 @@ import ufms.calculadora.modelo.EnumSiglaElemento;
 import ufms.calculadora.modelo.EquacaoQuimica;
 import ufms.calculadora.modelo.Solucao;
 
+/**
+ * Classe que executa o Balanceamento das Equações Químicas usando o Método Algébrico.
+ *  
+ * @author Hebert Ramos
+ *
+ */
 public class MetodoAlgebrico extends CalculoBalanceamento {
 
+	
 	@Override
 	public void setEquacaoQuimica(EquacaoQuimica equacaoQuimica) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * Método principal, faz o balanceamento.
+	 * @return EquacaoQuimica
+	 */
 	@Override
 	public EquacaoQuimica balancearEquacao(EquacaoQuimica equacaoQuimica) throws Exception {
 
@@ -40,6 +51,10 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		return equacaoQuimica;
 	}
 
+	/**
+	 * Ordena as variáveis de indice a partir das exressões algébricas geradas pela equação química. 
+	 * @param listaExpressaoIndice
+	 */
 	private void odernaExpressoesIndicesDeAcordoComAQuantidade(List<ExpressaoDeIndice> listaExpressaoIndice) {
 
 		for (int i = 0; i < listaExpressaoIndice.size() - 1; i++) {
@@ -62,6 +77,11 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		}
 	}
 
+	/**
+	 * Corrige o valor dos índices das soluções a partir das Variaveis e Expressão de índice de cada elemento.
+	 * @param listaVariaveisDasExpressoes
+	 * @param listaExpressaoIndice
+	 */
 	public void ajustaValoresDosIndicesDasSolucoes(List<Variavel> listaVariaveisDasExpressoes, List<ExpressaoDeIndice> listaExpressaoIndice) {
 
 		for (ExpressaoDeIndice expressaoDeIndice : listaExpressaoIndice) {
@@ -82,6 +102,12 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		}
 	}
 
+	/**
+	 * Isola as variáveis das expressoes geradas da equação química
+	 * @param listaVariaveisDasExpressoes
+	 * @param listaExpressaoIndice
+	 * @throws Exception
+	 */
 	public void descobreValoresDasVariaveisDasExpressoes(List<Variavel> listaVariaveisDasExpressoes, List<ExpressaoDeIndice> listaExpressaoIndice) throws Exception {
 
 		int tamanhoInicial = listaVariaveisDasExpressoes.size();
@@ -113,6 +139,14 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		}
 	}
 
+	/**
+	 * Descobre o valor das váriaveis ainda não reslvidas das expressões algébricas.
+	 * 
+	 * @param listaVariaveisNaoResolvidas
+	 * @param listaVariaveisResolvidas
+	 * @param expressoesAlgebricasNaoResolvidas
+	 * @throws Exception
+	 */
 	public void descobreValoresDasVariaveisRecursivo(List<Variavel> listaVariaveisNaoResolvidas, List<Variavel> listaVariaveisResolvidas, List<ExpressaoAlgebrica> expressoesAlgebricasNaoResolvidas) throws Exception {
 
 		if (listaVariaveisNaoResolvidas.size() != 0) {
@@ -187,6 +221,11 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		}
 	}
 
+	/**
+	 * Busca as variáveis de Indice de cada elemento da equação química.
+	 * @param listaExpressaoIndice
+	 * @return
+	 */
 	public List<Variavel> carregaVariaveisDasExpressoesDeIndice(List<ExpressaoDeIndice> listaExpressaoIndice) {
 
 		List<String> listaIdentificadorVariaveisDasExpressoesDeIndice = new ArrayList<String>();
@@ -210,6 +249,12 @@ public class MetodoAlgebrico extends CalculoBalanceamento {
 		return variaveisDasExpressoesDeIndice;
 	}
 
+	/**
+	 * Gera uma expressão de índice para o elemento da equação química.
+	 * @param siglaElemento
+	 * @param equacaoQuimica
+	 * @return
+	 */
 	public ExpressaoDeIndice carregaExpressaoDeIndiceDoElemento(EnumSiglaElemento siglaElemento, EquacaoQuimica equacaoQuimica) {
 
 		ExpressaoDeIndice expressaoDeIndice = new ExpressaoDeIndice();

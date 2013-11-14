@@ -4,6 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe que modela um Solução Química
+ *  
+ * @author Hebert Ramos
+ *
+ */
 public class Solucao implements Serializable {
 
 	private static final long serialVersionUID = -6009446587534959525L;

@@ -8,6 +8,12 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Classe que controla a solução do balanceamento.
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public class SolucaoBalanceamentoActivity extends Activity {
 
 	@Override

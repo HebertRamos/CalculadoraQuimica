@@ -12,6 +12,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Classe que controla a tela da tabela periódica.
+ * 
+ * @author Angelo Maggioni
+ * @author Hebert Ramos
+ *
+ */
 public class TabelaPeriodicaActivity extends Activity {
 
 	Elemento elementoSelecionado;

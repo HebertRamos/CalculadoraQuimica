@@ -10,7 +10,6 @@ import ufms.calculadora.modelo.EnumSiglaElemento;
 
 /**
  * 
- * @author Angelo Maggioni
  * @author Hebert Ramos
  * 
  * Classe estática que faz a instanciação de todos os elementos da tabela periódica.

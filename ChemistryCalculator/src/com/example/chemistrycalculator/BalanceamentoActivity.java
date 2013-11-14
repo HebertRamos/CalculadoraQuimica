@@ -10,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * Classe que controla a tela de balanceamento.
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class BalanceamentoActivity extends Activity {
 	
 	public static BalanceamentoController balanceamentoController;

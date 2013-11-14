@@ -3,13 +3,26 @@ package ufms.calculadora.extensoes.calculoEstequiometrico;
 import ufms.calculadora.modelo.Elemento;
 import ufms.calculadora.modelo.Solucao;
 
-
+/**
+ * Classe que efetua operações afim de calcular estequiometria da Equação Química. 
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class CalculoEstequiometrico {
 	
 	public static final Double numeroDeAvogrado = 6.02;
 	public static final Double volumeCNTP = 22.4;
 
-	
+	/**
+	 * Método que converte grandezas químicas.
+	 *  
+	 * @param grandezaAtual
+	 * @param valor
+	 * @param grandezaDesejada
+	 * @param solucao
+	 * @return
+	 */
 	public static Double converteGrandeza(EnumGrandezaQuimica grandezaAtual, Double valor, EnumGrandezaQuimica grandezaDesejada, Solucao solucao){
 		
 		//Mantém o valor em Mols
@@ -38,7 +51,11 @@ public class CalculoEstequiometrico {
 		return Math.round(valor*100000.0)/100000.0;
 	}
 	
-	
+	/**
+	 * Encontra o valor da massa molar de uma solução, somando a massa molar de cada elmento multiplicado pelo seu coeficiente.
+	 * @param solucao
+	 * @return
+	 */
 	public static Double encontraValorDaMassaMolar(Solucao solucao) {
 		Double valorResultado = 0.0;
 		

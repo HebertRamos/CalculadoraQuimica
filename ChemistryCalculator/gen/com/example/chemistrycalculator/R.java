@@ -53,12 +53,12 @@ public final class R {
     }
     public static final class id {
         public static final int RHE=0x7f09001c;
-        public static final int TextViewProdutosSolucaoBalanceamento=0x7f090018;
-        public static final int action_converte_para_massa_molar=0x7f090077;
-        public static final int action_converte_para_mol=0x7f090076;
-        public static final int action_converte_para_numero_moleculas=0x7f090079;
-        public static final int action_converte_para_volume=0x7f090078;
-        public static final int action_settings=0x7f090074;
+        public static final int TextViewProdutosSolucaoBalanceamento=0x7f090017;
+        public static final int action_converte_para_massa_molar=0x7f090075;
+        public static final int action_converte_para_mol=0x7f090074;
+        public static final int action_converte_para_numero_moleculas=0x7f090077;
+        public static final int action_converte_para_volume=0x7f090076;
+        public static final int action_settings=0x7f090072;
         public static final int btAddProduto=0x7f09000d;
         public static final int btAddReagente=0x7f090011;
         public static final int btBalanceamento=0x7f090015;
@@ -158,9 +158,7 @@ public final class R {
         public static final int elementoY=0x7f090042;
         public static final int elementoZn=0x7f090039;
         public static final int elementoZr=0x7f090043;
-        public static final int grama=0x7f090075;
-        public static final int imageButton2=0x7f090072;
-        public static final int imageButton4=0x7f090073;
+        public static final int grama=0x7f090073;
         public static final int imageButtonOkElemento=0x7f090002;
         public static final int imageView2=0x7f090014;
         public static final int inputProdutos=0x7f09000e;
@@ -169,7 +167,7 @@ public final class R {
         public static final int textViewCoeficienteElemento=0x7f090004;
         public static final int textViewGrandezaAtual=0x7f090019;
         public static final int textViewIndiceElemento=0x7f090005;
-        public static final int textViewReagentesSolucaoBalanceamento=0x7f090017;
+        public static final int textViewReagentesSolucaoBalanceamento=0x7f090018;
         public static final int textViewSolucao=0x7f090009;
         public static final int textViewSolucaoR=0x7f09001b;
         public static final int txtProduto=0x7f090013;
@@ -184,7 +182,6 @@ public final class R {
         public static final int activity_solucao_balanceamento=0x7f030005;
         public static final int activity_solucao_calculo_estequiometrico=0x7f030006;
         public static final int activity_tabela_periodica=0x7f030007;
-        public static final int activity_tela_teste=0x7f030008;
     }
     public static final class menu {
         public static final int adicionar_elemento=0x7f080000;

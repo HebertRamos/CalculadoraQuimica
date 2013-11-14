@@ -1,7 +1,15 @@
 package ufms.calculadora.extensoes.calculadoraAlgebrica;
 
-public class Variavel {
 
+/**
+ * Classe que modela uma variavel da Equação algébrica
+ * 
+ *  
+ * @author Hebert Ramos
+ *
+ */
+public class Variavel {
+	
 	private String id;
 	private Integer valor = 0;
 	private Integer valorCompanheiro = 1;
@@ -9,6 +17,11 @@ public class Variavel {
 	public Variavel() {
 	}
 
+	/**
+	 * Construtor que faz o parse de uma variavel em String para um objeto Variavel com seus atributos.
+	 * 
+	 * @param variavel
+	 */
 	public Variavel(String variavel) {
 
 		this.id = OperacaoMatematica.retiraNumero(variavel);

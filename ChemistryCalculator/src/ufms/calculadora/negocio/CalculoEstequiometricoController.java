@@ -4,6 +4,12 @@ import ufms.calculadora.extensoes.calculoEstequiometrico.CalculoEstequiometrico;
 import ufms.calculadora.extensoes.calculoEstequiometrico.EnumGrandezaQuimica;
 import ufms.calculadora.modelo.Solucao;
 
+/**
+ * Classe controller do Calculo Estequiometrico.
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public class CalculoEstequiometricoController implements Controller {
 
 	private Solucao solucao;

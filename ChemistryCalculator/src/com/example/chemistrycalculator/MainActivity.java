@@ -7,10 +7,20 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Classe que controla a tela inicial do sistema.
+ * 
+ * @author Angelo Maggioni
+ * @author Hebert Ramos
+ *
+ */
 public class MainActivity extends Activity {
 
 	Button btBalanceamento;
 	Button btCalculoEstequiometrico;
+	/* 
+	 * lallalala
+	 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +56,10 @@ public class MainActivity extends Activity {
 
 
     @Override
+   /*
+    * asdfasdf
+    * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+    */
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);

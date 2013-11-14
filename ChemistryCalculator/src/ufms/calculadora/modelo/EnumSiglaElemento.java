@@ -1,5 +1,12 @@
 package ufms.calculadora.modelo;
 
+/**
+ * Enum com as siglas dos elementos da tabela periodica.
+ * 
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public enum EnumSiglaElemento {
 	
 	/**

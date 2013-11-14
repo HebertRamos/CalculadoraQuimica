@@ -10,6 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Classe que controla a tela de adição de solução.
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class AdicionarSolucaoActicity extends Activity {
 	
 	

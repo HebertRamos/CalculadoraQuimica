@@ -7,6 +7,12 @@ import ufms.calculadora.extensoes.calculadoraAlgebrica.EnumOperacaoesCalculadora
 import ufms.calculadora.extensoes.calculadoraAlgebrica.ExpressaoAlgebrica;
 import ufms.calculadora.modelo.EnumSiglaElemento;
 
+/**
+ * Classe que modela a expressão de índice de cada elemento da Equação Química.
+ * 
+ * @author Hebert Ramos.
+ *
+ */
 public class ExpressaoDeIndice {
 
 	public EnumSiglaElemento siglaElemento;
@@ -51,6 +57,10 @@ public class ExpressaoDeIndice {
 		this.listaIndiceProduto.add(indice);
 	}
 
+	/**
+	 * Gera uma expresão algébrica a partir da expressão de índice.
+	 * @return
+	 */
 	public ExpressaoAlgebrica geraExpressaoAlgebrica() {
 		ExpressaoAlgebrica expressaoAlgebrica = new ExpressaoAlgebrica();
 

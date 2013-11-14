@@ -3,6 +3,12 @@ package ufms.calculadora.extensoes.calculadoraAlgebrica;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe que modela a expressão Algébrica.
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public class ExpressaoAlgebrica {
 
 	private List<Variavel> listaVariavel = new ArrayList<Variavel>();

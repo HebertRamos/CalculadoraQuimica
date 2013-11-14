@@ -1,7 +1,17 @@
 package ufms.calculadora.extensoes.calculadoraAlgebrica;
 
+/**
+ * Classe que faz operaçõa de subtração.
+ * 
+ * @author Hebert Ramos
+ *
+ */
 public class OperacaoSubtracao extends OperacaoMatematica {
 
+	/**
+	 * Executa a operação de subtração entre dois inteiros.
+	 * @return String
+	 */
 	@Override
 	public String executaOperacao(Integer alg1, Integer alg2) {
 
@@ -13,6 +23,10 @@ public class OperacaoSubtracao extends OperacaoMatematica {
 		return String.valueOf(alg1 - alg2);
 	}
 
+	/**
+	 * Executa a operação de subtração entre duas Variaveis.
+	 * @return String
+	 */
 	@Override
 	public String executaOperacao(String alg1, String alg2) throws OperacaoNaoSuportadaException {
 

@@ -11,11 +11,11 @@ import android.widget.EditText;
 
 /**
  * 
+ * Classe responsável por gerenciar o layout activity_adicionar_elemento.xml.
+ *  
  * @author Agenlo Maggioni
  * @author Hebert Ramos 
- * 
- *  Classe responsável por gerenciar o layout activity_adicionar_elemento.xml.
- *  
+ *   
  */
 public class AdicionarElementoActivity extends Activity {
 

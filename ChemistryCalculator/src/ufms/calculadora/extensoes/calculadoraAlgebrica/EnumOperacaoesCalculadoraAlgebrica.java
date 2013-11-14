@@ -6,16 +6,27 @@ import java.util.Set;
 /**
  * Enum com as operações realizadas pela calculadora, os símbolos das
  * respectivas Operações são obtidos pelo método estático getSimboloOperacao;
- * @author hramos
+ * 
+ * @author Hebert Ramos 
  */
 public enum EnumOperacaoesCalculadoraAlgebrica {
 
 	SOMA, SUBTRACAO, IGUALDADE;
 
+	/**
+	 * Procura operação pelo símbolo 
+	 * @param EnumOperacaoesCalculadoraAlgebrica
+	 * @return
+	 */
 	public static String getSimboloOperacao(EnumOperacaoesCalculadoraAlgebrica operacao) {
 		return getSimbolosOperacao().get(operacao);
 	}
 
+	/**
+	 * Procura operação pelo símbolo 
+	 * @param EnumOperacaoesCalculadoraAlgebrica
+	 * @return
+	 */
 	public static EnumOperacaoesCalculadoraAlgebrica getSimboloOperacaoPeloString(String simboloString) {
 		HashMap<EnumOperacaoesCalculadoraAlgebrica, String> mapaSimbolos = getSimbolosOperacao();
 		if (mapaSimbolos.containsValue(simboloString)) {
@@ -29,6 +40,10 @@ public enum EnumOperacaoesCalculadoraAlgebrica {
 		return null;
 	}
 
+	/**
+	 * Retorna Map das operações.
+	 * @return
+	 */
 	public static HashMap<EnumOperacaoesCalculadoraAlgebrica, String> getSimbolosOperacao() {
 		HashMap<EnumOperacaoesCalculadoraAlgebrica, String> mapaSimbolos = new HashMap<EnumOperacaoesCalculadoraAlgebrica, String>();
 		mapaSimbolos.put(SOMA, "+");
@@ -37,6 +52,11 @@ public enum EnumOperacaoesCalculadoraAlgebrica {
 		return mapaSimbolos;
 	}
 
+	/**
+	 * Retorna o simbolo inverso da operação algébrica
+	 * @param String
+	 * @return
+	 */
 	public static String getSimboloInversoOperacao(String simboloString) {
 
 		EnumOperacaoesCalculadoraAlgebrica simbolo = getSimboloOperacaoPeloString(simboloString);
@@ -47,6 +67,11 @@ public enum EnumOperacaoesCalculadoraAlgebrica {
 		return null;
 	}
 
+	/**
+	 * Retorna o simbolo inverso da operação algébrica
+	 * @param EnumOperacaoesCalculadoraAlgebrica
+	 * @return
+	 */
 	public static String getSimboloInversoOperacao(EnumOperacaoesCalculadoraAlgebrica operacao) {
 		if (operacao.equals(SOMA)) {
 			return getSimboloOperacao(SUBTRACAO);
