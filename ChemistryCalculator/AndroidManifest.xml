@@ -8,6 +8,10 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="9" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:fontFamily="roboto"
@@ -56,6 +60,10 @@
         <activity
             android:name="com.example.chemistrycalculator.SolucaoCalculoEstequiometricoActivity"
             android:label="@string/title_activity_solucao_calculo_estequiometrico" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.PressaoAtmosfericaLocalActivity"
+            android:label="@string/title_activity_pressao_atmosferica_local" >
         </activity>
     </application>
 

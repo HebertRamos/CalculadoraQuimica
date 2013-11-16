@@ -26,4 +26,13 @@
         android:layout_marginTop="30dp"
         android:text="Cálculo Estequiométrico" />
 
+    <Button
+        android:id="@+id/btPressaoLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCalculoEstequiometrico"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Pressao Atm. Local" />
+
 </RelativeLayout>

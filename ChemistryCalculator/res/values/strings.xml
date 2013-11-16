@@ -13,11 +13,10 @@
     <string name="title_activity_adicionar_elemento">Adicionar Elemento</string>
     <string name="title_activity_solucao_balanceamento">Solucao Balanceamento</string>
     <string name="title_activity_solucao_calculo_estequiometrico">Solucao Estequiometria</string>
-    
-    
     <string name="mol">Mol</string>
     <string name="massa_molar">Massa Molar</string>
     <string name="volume_cntp">Volume na CNTP</string>
     <string name="numero_moleculas">Número de Moléculas</string>
+    <string name="title_activity_pressao_atmosferica_local">PressaoAtmosfericaLocalActivity</string>
 
 </resources>
