@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chemistrycalculator"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:fontFamily="roboto"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ChemistryCalculatorTheme" >
+        <activity
+            android:name="com.example.chemistrycalculator.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.activity_balanceamento"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.example.chemistrycalculator.BalanceamentoActivity"
+            android:label="@string/title_activity_balanceamento" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.chemistrycalculator.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.AdicionarSolucaoActicity"
+            android:label="@string/title_activity_adicionar_produto" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.TabelaPeriodicaActivity"
+            android:label="@string/title_activity_tabela_periodica" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.CalculoEstequiometricoActivity"
+            android:label="@string/title_activity_calculo_estequiometrico" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.AdicionarElementoActivity"
+            android:label="@string/title_activity_adicionar_elemento" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.SolucaoBalanceamentoActivity"
+            android:label="@string/title_activity_solucao_balanceamento" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.SolucaoCalculoEstequiometricoActivity"
+            android:label="@string/title_activity_solucao_calculo_estequiometrico" >
+        </activity>
+        <activity
+            android:name="com.example.chemistrycalculator.PressaoAtmosfericaLocalActivity"
+            android:label="@string/title_activity_pressao_atmosferica_local" >
+        </activity>
+    </application>
+
+</manifest>

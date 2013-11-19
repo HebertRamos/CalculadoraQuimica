@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RHE"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:collapseColumns="10dp"
+    android:shrinkColumns="1"
+    android:stretchColumns="1"
+    tools:context=".TabelaPeriodicaActivity" >
+
+
+    <!-- Linha 1 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoH"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/laranja"
+            android:gravity="center"
+            android:text="H" />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/elementoHe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="He" />
+    </TableRow>
+
+    <!-- Linha 2 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoLi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Li" />
+
+        <TextView
+            android:id="@+id/elementoBe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Be" />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/elementoB"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="B" />
+
+        <TextView
+            android:id="@+id/elementoC"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="C" />
+
+        <TextView
+            android:id="@+id/elementoN"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="N" />
+
+        <TextView
+            android:id="@+id/elementoO"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="O" />
+
+        <TextView
+            android:id="@+id/elementoF"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="F" />
+
+        <TextView
+            android:id="@+id/elementoNe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="Ne" />
+    </TableRow>
+
+    <!-- Linha 3 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoNa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Na" />
+
+        <TextView
+            android:id="@+id/elementoMg"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Mg" />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/elementoAl"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Al" />
+
+        <TextView
+            android:id="@+id/elementoSi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="Si" />
+
+        <TextView
+            android:id="@+id/elementoP"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="P" />
+
+        <TextView
+            android:id="@+id/elementoS"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="S" />
+
+        <TextView
+            android:id="@+id/elementoCl"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="Cl" />
+
+        <TextView
+            android:id="@+id/elementoAr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="Ar" />
+    </TableRow>
+
+    <!-- Linha 4 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoK"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="K" />
+
+        <TextView
+            android:id="@+id/elementoCa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ca" />
+
+        <TextView
+            android:id="@+id/elementoSc"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Sc" />
+
+        <TextView
+            android:id="@+id/elementoTi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ti" />
+
+        <TextView
+            android:id="@+id/elementoV"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="V" />
+
+        <TextView
+            android:id="@+id/elementoCr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Cr" />
+
+        <TextView
+            android:id="@+id/elementoMn"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Mn" />
+
+        <TextView
+            android:id="@+id/elementoFe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Fe" />
+
+        <TextView
+            android:id="@+id/elementoCo"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Co" />
+
+        <TextView
+            android:id="@+id/elementoNi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ni" />
+
+        <TextView
+            android:id="@+id/elementoCu"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Cu" />
+
+        <TextView
+            android:id="@+id/elementoZn"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Zn" />
+
+        <TextView
+            android:id="@+id/elementoGa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ga" />
+
+        <TextView
+            android:id="@+id/elementoGe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="Ge" />
+
+        <TextView
+            android:id="@+id/elementoAs"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="As" />
+
+        <TextView
+            android:id="@+id/elementoSe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="Se" />
+
+        <TextView
+            android:id="@+id/elementoBr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="Br" />
+
+        <TextView
+            android:id="@+id/elementoKr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="Kr" />
+    </TableRow>
+
+    <!-- Linha 5 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoRb"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Rb" />
+
+        <TextView
+            android:id="@+id/elementoSr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Sr" />
+
+        <TextView
+            android:id="@+id/elementoY"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Y" />
+
+        <TextView
+            android:id="@+id/elementoZr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Zr" />
+
+        <TextView
+            android:id="@+id/elementoNb"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Nb" />
+
+        <TextView
+            android:id="@+id/elementoMo"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Mo" />
+
+        <TextView
+            android:id="@+id/elementoTc"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Tc" />
+
+        <TextView
+            android:id="@+id/elementoRu"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ru" />
+
+        <TextView
+            android:id="@+id/elementoRh"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Rh" />
+
+        <TextView
+            android:id="@+id/elementoPd"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Pd" />
+
+        <TextView
+            android:id="@+id/elementoAg"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ag" />
+
+        <TextView
+            android:id="@+id/elementoCd"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Cd" />
+
+        <TextView
+            android:id="@+id/elementoIn"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="In" />
+
+        <TextView
+            android:id="@+id/elementoSn"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Sn" />
+
+        <TextView
+            android:id="@+id/elementoSb"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="Sb" />
+
+        <TextView
+            android:id="@+id/elementoTe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="Te" />
+
+        <TextView
+            android:id="@+id/elementoI"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="I" />
+
+        <TextView
+            android:id="@+id/elementoXe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="Xe" />
+    </TableRow>
+
+    <!-- Linha 6 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoCs"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Cs" />
+
+        <TextView
+            android:id="@+id/elementoBa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ba" />
+
+        <TextView
+            android:id="@+id/elementoLa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="La" />
+
+        <TextView
+            android:id="@+id/elementoHf"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Hf" />
+
+        <TextView
+            android:id="@+id/elementoTa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ta" />
+
+        <TextView
+            android:id="@+id/elementoW"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="W" />
+
+        <TextView
+            android:id="@+id/elementoRe"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Re" />
+
+        <TextView
+            android:id="@+id/elementoOs"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Os" />
+
+        <TextView
+            android:id="@+id/elementoIr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ir" />
+
+        <TextView
+            android:id="@+id/elementoPt"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Pt" />
+
+        <TextView
+            android:id="@+id/elementoAu"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Au" />
+
+        <TextView
+            android:id="@+id/elementoHg"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Hg" />
+
+        <TextView
+            android:id="@+id/elementoTi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ti" />
+
+        <TextView
+            android:id="@+id/elementoPb"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Pb" />
+
+        <TextView
+            android:id="@+id/elementoBi"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Bi" />
+
+        <TextView
+            android:id="@+id/elementoPo"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/verde"
+            android:gravity="center"
+            android:text="Po" />
+
+        <TextView
+            android:id="@+id/elementoAt"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/amarelo"
+            android:gravity="center"
+            android:text="At" />
+
+        <TextView
+            android:id="@+id/elementoRn"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/azul"
+            android:gravity="center"
+            android:text="Rn" />
+    </TableRow>
+
+    <!-- Linha 7 -->
+
+    <TableRow android:layout_height="@dimen/tamanho_altura_linha_elemento" >
+
+        <TextView
+            android:id="@+id/elementoFr"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Fr" />
+
+        <TextView
+            android:id="@+id/elementoRa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ra" />
+
+        <TextView
+            android:id="@+id/elementoCa"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ca" />
+
+        <TextView
+            android:id="@+id/elementoRf"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Rf" />
+
+        <TextView
+            android:id="@+id/elementoDb"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Db" />
+
+        <TextView
+            android:id="@+id/elementoSg"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Sg" />
+
+        <TextView
+            android:id="@+id/elementoBh"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Bh" />
+
+        <TextView
+            android:id="@+id/elementoHs"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Hs" />
+
+        <TextView
+            android:id="@+id/elementoMt"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Mt" />
+
+        <TextView
+            android:id="@+id/elementoDs"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Ds" />
+
+        <TextView
+            android:id="@+id/elementoRg"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Rg" />
+
+        <TextView
+            android:id="@+id/elementoUub"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Uub" />
+
+        <TextView
+            android:id="@+id/elementoUut"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Uut" />
+
+        <TextView
+            android:id="@+id/elementoUuq"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Uuq" />
+
+        <TextView
+            android:id="@+id/elementoUup"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Uup" />
+
+        <TextView
+            android:id="@+id/elementoUuh"
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:background="@color/rosa"
+            android:gravity="center"
+            android:text="Uuh" />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+
+        <TextView
+            android:layout_width="@dimen/tamanho_altura_largura_elemento"
+            android:layout_height="@dimen/tamanho_altura_largura_elemento"
+            android:text=" " />
+    </TableRow>
+
+</TableLayout>

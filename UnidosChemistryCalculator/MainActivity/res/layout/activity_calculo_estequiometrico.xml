@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CalculoEstequiometricoActivity" >
+
+    <ImageButton
+        android:id="@+id/btAddProduto"
+        android:layout_width="@dimen/BotaoAdicionar"
+        android:layout_height="@dimen/BotaoAdicionar"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickAddSolucao"
+        android:src="@drawable/botao" />
+
+    <EditText
+        android:id="@+id/inputSubstancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="63dp"
+        android:layout_toRightOf="@+id/btAddProduto"
+        android:ems="10"
+        android:enabled="false"
+        android:paddingLeft="0dp"
+        android:width="@dimen/tamanho_campo_solucao_grande" />
+
+    <TextView
+        android:id="@+id/txtReagente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inputSubstancia"
+        android:layout_alignLeft="@+id/inputSubstancia"
+        android:text="Substância " />
+
+    <Button
+        android:id="@+id/btBalancear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickBtCalcular"
+        android:text="Calcular Estequiometria"
+        android:width="250dp" />
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BalanceamentoActivity" >
+
+    <ImageButton
+        android:id="@+id/btAddProduto"
+        android:layout_width="@dimen/BotaoAdicionar"
+        android:layout_height="@dimen/BotaoAdicionar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/inputProdutos"
+        android:onClick="onClickAddProduto"
+        android:src="@drawable/botao" />
+
+    <TextView
+        android:id="@+id/txtReagente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inputSubstancia"
+        android:layout_alignLeft="@+id/inputSubstancia"
+        android:layout_marginLeft="21dp"
+        android:text="Reagentes" />
+
+    <ImageButton
+        android:id="@+id/btAddReagente"
+        android:layout_width="@dimen/BotaoAdicionar"
+        android:layout_height="@dimen/BotaoAdicionar"
+        android:layout_alignBottom="@+id/btBalancear"
+        android:layout_alignLeft="@+id/inputSubstancia"
+        android:onClick="onClickAddReagente"
+        android:src="@drawable/botao" />
+
+    <TextView
+        android:id="@+id/txtProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtReagente"
+        android:layout_alignBottom="@+id/txtReagente"
+        android:layout_alignLeft="@+id/inputProdutos"
+        android:layout_marginLeft="23dp"
+        android:text="Produtos" />
+
+    <EditText
+        android:id="@+id/inputProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:enabled="false"
+        android:paddingRight="0dp"
+        android:width="@dimen/tamanho_campo_solucao_medio" />
+
+    <EditText
+        android:id="@+id/inputSubstancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:enabled="false"
+        android:paddingLeft="0dp"
+        android:width="@dimen/tamanho_campo_solucao_medio" />
+
+    <Button
+        android:id="@+id/btBalancear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickBtBalancear"
+        android:text="Balancear" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:minHeight="10dp"
+        android:src="@drawable/seta_direita" />
+
+</RelativeLayout>

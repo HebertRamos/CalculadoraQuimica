@@ -1,0 +1,54 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="ChemistryCalculatorTheme" parent="android:Theme.Light">
+        <item name="android:windowTitleBackgroundStyle">@style/estiloPlanoDeFundoTitulo</item>
+        <item name="android:windowTitleSize">90dp</item>
+        <item name="android:windowTitleStyle">@style/estiloTextoTitulo</item>
+        <item name="android:textSize">20dip</item>
+    </style> 
+    
+    <style name="estiloPlanoDeFundoTitulo">     
+        <item name="android:background">@drawable/plano_de_fundo</item>
+    </style>
+    
+    <style name="estiloTextoTitulo">     
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25dip</item>
+    </style>
+    
+    <style name="estiloTextoElemento">     
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">25dip</item>
+    </style>
+    
+    <color name="black">#000000</color>
+    
+    <!--  Cores Tabea Periódica -->
+    <color name="laranja">#FFDEAD</color>
+    <color name="azul">#87CEEB</color>
+    <color name="rosa">#FFB6C1</color>
+    <color name="verde">#90EE90</color>
+    <color name="amarelo">#FBEC5D</color>
+    
+    
+    
+    
+    
+</resources>

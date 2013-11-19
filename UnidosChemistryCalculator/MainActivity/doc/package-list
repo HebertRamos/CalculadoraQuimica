@@ -1,0 +1,8 @@
+com.example.chemistrycalculator
+ufms.calculadora.excecoes
+ufms.calculadora.extensoes.calculadoraAlgebrica
+ufms.calculadora.extensoes.calculoBalanceamento
+ufms.calculadora.extensoes.calculoEstequiometrico
+ufms.calculadora.extensoes.recursos
+ufms.calculadora.modelo
+ufms.calculadora.negocio

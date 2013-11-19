@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SolucaoCalculoEstequiometricoActivity" >
+
+    <TextView
+        android:id="@+id/textViewGrandezaAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextValor"
+        android:layout_alignLeft="@+id/editTextValor"
+        android:text="Valor" />
+
+    <EditText
+        android:id="@+id/editTextValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewSolucaoR"
+        android:layout_alignBottom="@+id/textViewSolucaoR"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="38dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:width="@dimen/tamanho_campo_solucao_medio" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewSolucaoR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="86dp"
+        android:layout_toRightOf="@+id/editTextValor"
+        android:text="TextView" />
+
+</RelativeLayout>

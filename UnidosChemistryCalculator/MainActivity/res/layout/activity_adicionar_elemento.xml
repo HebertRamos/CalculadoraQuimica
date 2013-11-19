@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingLeft="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingRight="@dimen/alinhamento_esquerda_direita_rodape"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AdicionarElementoActivity" >
+
+    <EditText
+        android:id="@+id/editTextCoeficienteElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextElemento"
+        android:layout_alignBottom="@+id/editTextElemento"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="38dp"
+        android:ems="10"
+        android:inputType="number"
+        android:width="@dimen/tamanho_campo_indice_coeficiente" />
+
+    <EditText
+        android:id="@+id/editTextElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonOkElemento"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@+id/editTextCoeficienteElemento"
+        android:ems="10"
+        android:maxWidth="@dimen/activity_horizontal_margin" 
+        android:width="@dimen/tamanho_campo_solucao_medio"/>
+
+    <Button
+        android:id="@+id/imageButtonOkElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="OK                 " />
+
+    <TextView
+        android:id="@+id/textViewCoeficiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextElemento"
+        android:layout_alignLeft="@+id/editTextElemento"
+        android:layout_marginLeft="24dp"
+        android:text="Elemento" />
+
+    <TextView
+        android:id="@+id/textViewCoeficienteElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCoeficiente"
+        android:layout_alignBottom="@+id/textViewCoeficiente"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/textViewCoeficiente"
+        android:text="Coeficiente" />
+
+    <TextView
+        android:id="@+id/textViewIndiceElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextIndiceElemento"
+        android:layout_alignTop="@+id/editTextElemento"
+        android:text="Índice" />
+
+    <EditText
+        android:id="@+id/editTextIndiceElemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewIndiceElemento"
+        android:layout_marginRight="25dp"
+        android:ems="10"
+        android:inputType="number"
+        android:width="@dimen/tamanho_campo_indice_coeficiente" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

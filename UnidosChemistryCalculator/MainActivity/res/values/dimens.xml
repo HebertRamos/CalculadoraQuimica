@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="Titulo">25dp</dimen>
+    <dimen name="ImagemSeta">10dp</dimen>
+    <dimen name="BotaoAdicionar">90dp</dimen>
+    <dimen name="tamanho_campo_indice_coeficiente">60dp</dimen>
+    <dimen name="tamanho_campo_solucao_medio">180dp</dimen>
+    <dimen name="tamanho_campo_solucao_grande">250dp</dimen>
+    <dimen name="alinhamento_esquerda_direita_rodape">0dp</dimen>
+    
+    <dimen name="tamanho_altura_largura_elemento">30dp</dimen>
+    <dimen name="tamanho_margem_linha_elemento">1dp</dimen>
+    <dimen name="tamanho_altura_linha_elemento">540dp</dimen>
+    
+    
+    
+
+</resources>
