@@ -1,5 +1,6 @@
 package com.example.chemistrycalculator;
 
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -18,7 +19,7 @@ import android.widget.TextView;
 public class PressaoAtmosfericaLocalActivity extends Activity {
 
 	/* definindo o GPS como fonte de dados de geolocalizacao */
-	String PROVIDER = LocationManager.GPS_PROVIDER;
+	String PROVIDER;
 
 	/* definindo WIFI como fonte de dadods */
 	// String PROVIDER = LocationManager.NETWORK_PROVIDER;
@@ -44,6 +45,29 @@ public class PressaoAtmosfericaLocalActivity extends Activity {
 
 		/* Iniciando o serviço de localização */
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_MEDIUM);
+        criteria.setAltitudeRequired(true);
+        criteria.setPowerRequirement(Criteria.POWER_LOW);
+        PROVIDER = locationManager.getBestProvider(criteria, true);
+        
+        
+        // vc parou aqui.... dizer +/- que:
+        // Alerta para gps desligado, quando desligado, tenta utilizar dados da wireless... caso contrário,
+        // pega a ultima localização válida.
+        // quando ligado, compara o provedor que melhor atende ao critério (GPS ou wifi)
+        // 
+        
+        
+        // continuar:
+        
+        //1: estudando sobre como trocar entre o provedor GPS ou WIFI
+        
+        //2: estudar pra colocar o tempo de atualização baseado no tempo e na distância, veja página abertar do gpstracker
+        
+        
+        
+        
 		Location lastLocation = locationManager.getLastKnownLocation(PROVIDER);
 		if (lastLocation != null) {
 			updateLoc(lastLocation);
